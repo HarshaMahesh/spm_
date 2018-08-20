@@ -11,14 +11,22 @@ using System.Windows.Forms;
 namespace Intern_forms_management_system.UIForms
 {
     public partial class DashBoard : Form
+
+            
     {
+        UserControls.UcForm1 form1; 
+        DbConnect db;
         public DashBoard()
         {
             InitializeComponent();
+
+            db = new DbConnect();
+            form1 = new UserControls.UcForm1();
         }
 
         private void DashBoard_Load(object sender, EventArgs e)
         {
+            sidepanelbtn.Visible = false;
 
         }
 
@@ -44,6 +52,111 @@ namespace Intern_forms_management_system.UIForms
         private void bunifuCustomLabel2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void SidePanal_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void SidePanal_MouseEnter(object sender, EventArgs e)
+        {
+            if (SidePanal.Width == 57)
+            {
+                sidepanelbtn.Visible = false;
+                logo.Visible = true;
+                SidePanal.Width = 277;          
+                
+                //SidePanalAnimation.ShowSync(SidePanal);
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bunifuGradientPanel3_MouseEnter(object sender, EventArgs e)
+        {
+            sidepanelbtn.Visible = false;
+            logo.Visible = true;
+            SidePanal.Width = 277;
+        }
+
+        private void StudentRegBtn_DragEnter(object sender, DragEventArgs e)
+        {
+            sidepanelbtn.Visible = false;
+            logo.Visible = true;
+            SidePanal.Width = 277;
+        }
+
+        private void StudentRegBtn_MouseEnter(object sender, EventArgs e)
+        {
+            sidepanelbtn.Visible = false;
+            logo.Visible = true;
+            SidePanal.Width = 277;
+        }
+
+        private void bunifuGradientPanel3_MouseEnter_1(object sender, EventArgs e)
+        {
+            sidepanelbtn.Visible = false;
+            logo.Visible = true;
+            SidePanal.Width = 277;
+        }
+
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void homeBtn_Click(object sender, EventArgs e)
+        {
+           sidepanelbtn.Visible = false;
+           logo.Visible = true;
+           SidePanal.Width = 277;
+            
+            panel2.Show();
+        }
+
+        private void homeBtn_MouseEnter(object sender, EventArgs e)
+        {
+            
+                sidepanelbtn.Visible = false;
+                logo.Visible = true;
+                SidePanal.Width = 277;
+            
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            if (SidePanal.Width == 277)
+            {
+                sidepanelbtn.Visible = true;
+                logo.Visible = false;
+                SidePanal.Width = 57;
+                // SidePanalAnimation.ShowSync(SidePanal);
+            }
+            else
+            {
+                sidepanelbtn.Visible = false;
+                logo.Visible = true;
+                SidePanal.Width = 277;
+            }
+
+            panel2.Hide();
+            form1.Show();
+            form1.Dock = DockStyle.Fill;
+            panel1.Controls.Add(form1);
         }
     }
 }

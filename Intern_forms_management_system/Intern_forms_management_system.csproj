@@ -81,6 +81,12 @@
     <Compile Include="UIForms\SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UcForm1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UcForm1.Designer.cs">
+      <DependentUpon>UcForm1.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -91,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIForms\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UcForm1.resx">
+      <DependentUpon>UcForm1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Font\Corbert-Regular.otf" />
     <None Include="Font\Dense-Regular.otf" />
