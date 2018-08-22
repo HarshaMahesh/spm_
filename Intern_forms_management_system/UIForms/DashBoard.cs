@@ -14,7 +14,8 @@ namespace Intern_forms_management_system.UIForms
 
             
     {
-        UserControls.UcForm1 form1; 
+        UserControls.UcForm1 form1;
+        UserControls.SupervisorDailyDiary form3;
         DbConnect db;
         public DashBoard()
         {
@@ -22,6 +23,7 @@ namespace Intern_forms_management_system.UIForms
 
             db = new DbConnect();
             form1 = new UserControls.UcForm1();
+            form3 = new UserControls.SupervisorDailyDiary();
         }
 
         private void DashBoard_Load(object sender, EventArgs e)
@@ -154,9 +156,33 @@ namespace Intern_forms_management_system.UIForms
             }
 
             panel2.Hide();
+            form3.Hide();
             form1.Show();
             form1.Dock = DockStyle.Fill;
             panel1.Controls.Add(form1);
+        }
+
+        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        {
+            if (SidePanal.Width == 277)
+            {
+                sidepanelbtn.Visible = true;
+                logo.Visible = false;
+                SidePanal.Width = 57;
+                // SidePanalAnimation.ShowSync(SidePanal);
+            }
+            else
+            {
+                sidepanelbtn.Visible = false;
+                logo.Visible = true;
+                SidePanal.Width = 277;
+            }
+            form1.Hide();
+            panel2.Hide();
+            form3.Show();
+            form3.Dock = DockStyle.Fill;
+            panel1.Controls.Add(form3);
+
         }
     }
 }

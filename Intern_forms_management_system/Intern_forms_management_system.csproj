@@ -32,15 +32,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\HARSHA MAHESH\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>C:\Users\Anupa\Desktop\.net frameworks\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\..\..\..\..\ITP Project\New folder\Bunifu_UI_v1.52\Bunifu_UI_v1.52.dll</HintPath>
+      <HintPath>C:\Users\Anupa\Desktop\.net frameworks\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="MySql.Data, Version=6.9.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.7.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 6.7.9\Assemblies\v4.5\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
@@ -56,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DbConnect.cs" />
+    <Compile Include="DbOperations.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,11 +78,20 @@
     <Compile Include="UIForms\DashBoard.Designer.cs">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIForms\LoginIFMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UIForms\SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UIForms\SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SupervisorDailyDiary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SupervisorDailyDiary.Designer.cs">
+      <DependentUpon>SupervisorDailyDiary.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UcForm1.cs">
       <SubType>UserControl</SubType>
@@ -95,8 +107,14 @@
     <EmbeddedResource Include="UIForms\DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UIForms\LoginIFMS.resx">
+      <DependentUpon>LoginIFMS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIForms\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\SupervisorDailyDiary.resx">
+      <DependentUpon>SupervisorDailyDiary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UcForm1.resx">
       <DependentUpon>UcForm1.cs</DependentUpon>
