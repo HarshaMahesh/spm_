@@ -46,7 +46,18 @@ namespace Intern_forms_management_system
 
 
 
-        } 
+        }
 
+        //Registering the employees - done by the HR Manager
+        public void registerIntern(string studentid)
+        {
+            db.Connection();
+
+            String query1 = "INSERT INTO `intern_student`(`studentId`,`full_name`,`university`,`dob`,`email`,`telephone`,`department`,`address`)";
+            MySqlCommand cmd1 = new MySqlCommand(query1, db.con);
+
+            cmd1.Parameters.AddWithValue("@f1",studentid);
+            cmd1.ExecuteNonQuery();
+        }
     }
 }

@@ -12,6 +12,8 @@ namespace Intern_forms_management_system.UserControls
 {
     public partial class UCStudentRegisterHR : UserControl
     {
+        DbOparation dbobject = new DbOparation();
+
         public UCStudentRegisterHR()
         {
             InitializeComponent();
@@ -40,8 +42,10 @@ namespace Intern_forms_management_system.UserControls
                 MessageBox.Show("Please Fill all the fields.....");
 
             }
-            else {
-
+            else
+            {
+                dbobject.registerIntern(StudentIDTextBox.Text);
+                MessageBox.Show("Inserted Successully");
             }
         }
 
@@ -125,6 +129,11 @@ namespace Intern_forms_management_system.UserControls
             DepartmentTextBox.Text = "";
             TelephoneTextBox.Text = "";
             UniversityTextBox.Text = "";
+        }
+
+        private void StudentIDTextBox_Enter(object sender, EventArgs e)
+        {
+            StudentIDTextBox.Text = "";
         }
     }
 }
