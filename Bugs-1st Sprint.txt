@@ -1,0 +1,6 @@
+Textbox removed for the date of birth and was replaced by a datepicker
+	
+Calendar for the date of birth fixed according to the date format (yyyy/dd/mm)
+
+IT Number/ Registration number is required when registering for an internship
+
