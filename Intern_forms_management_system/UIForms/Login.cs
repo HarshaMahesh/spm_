@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,19 +7,43 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Intern_forms_management_system.Login
+namespace Intern_forms_management_system.UIForms
 {
     class Login
     {
         //decalre properties 
-        public string Username { get; set; }
-        public string Userpassword { get; set; }
+        private string Username { get; set; }
+        private string Userpassword { get; set; }
+
+        private DbConnect connection;
 
         //intialise  
-        public Login(string user, string pass)
+        public Login()
         {
-            this.Username = user;
-            this.Userpassword = pass;
+            connection = new DbConnect();
+            
+        }
+
+        //setters
+        public void setUsername(string uname)
+        {
+            this.Username = uname;
+        }
+
+        public void setPassword(string pwd)
+        {
+            this.Userpassword = pwd;
+        }
+
+        //getters
+        public string getPassword()
+        {
+            return this.Userpassword;
+        }
+
+        public string getUsername()
+        {
+            return this.Username;
         }
         //validate string 
         private bool StringValidator(string input)
@@ -72,7 +97,18 @@ namespace Intern_forms_management_system.Login
             //check user name is correct 
             else
             {
-                if (Username != user)
+                connection.Connection();
+                connection.con.Open();
+                String query1 = "select * from users wherer username=@param1";
+                MySqlCommand cmd = new MySqlCommand(query1, connection.con);
+                cmd.Parameters.AddWithValue("@param1", getUsername());
+                cmd.Connection = connection.con;
+               
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                //while (reader.Read())
+                 if (!reader.Read())
                 {
                     MessageBox.Show("User name is incorrect!");
                     ClearTexts(user, pass);

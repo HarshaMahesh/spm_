@@ -8,7 +8,7 @@ namespace Intern_forms_management_system.Diary
 {
     class DiaryEntry
     {
-        private string ID;
+        //private string ID;
         private string date { get; set; }
         private string time { get; set; }
         private DateTime date_Time { get; set; }
