@@ -14,14 +14,14 @@ namespace Intern_forms_management_system.UIForms
 
             
     {
-        UserControls.UcForm1 form1; 
+        UserControls.LoginUI form1; 
         DbConnect db;
         public DashBoard()
         {
             InitializeComponent();
 
             db = new DbConnect();
-            form1 = new UserControls.UcForm1();
+            form1 = new UserControls.LoginUI();
         }
 
         private void DashBoard_Load(object sender, EventArgs e)
