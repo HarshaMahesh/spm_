@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Intern_forms_management_system.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +23,7 @@ namespace Intern_forms_management_system.UIForms
 
             db = new DbConnect();
             form1 = new UserControls.LoginUI();
+
         }
 
         private void DashBoard_Load(object sender, EventArgs e)
@@ -157,6 +159,28 @@ namespace Intern_forms_management_system.UIForms
             form1.Show();
             form1.Dock = DockStyle.Fill;
             panel1.Controls.Add(form1);
+        }
+
+        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        {
+            DailyDiary diary = new DailyDiary();
+            if (SidePanal.Width == 277)
+            {
+                sidepanelbtn.Visible = true;
+                logo.Visible = false;
+                SidePanal.Width = 57;
+                // SidePanalAnimation.ShowSync(SidePanal);
+            }
+            else
+            {
+                sidepanelbtn.Visible = false;
+                logo.Visible = true;
+                SidePanal.Width = 277;
+            }
+            panel2.Hide();
+            diary.Show();
+            diary.Dock = DockStyle.Fill;
+            panel1.Controls.Add(diary);
         }
     }
 }

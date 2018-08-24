@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Intern_forms_management_system.UserControls
 {
-    public partial class UcForm1 : UserControl
+    public partial class LoginUI : UserControl
     {
-        public UcForm1()
+        public LoginUI()
         {
             InitializeComponent();
         }

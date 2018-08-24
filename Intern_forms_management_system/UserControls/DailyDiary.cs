@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Intern_forms_management_system.UserControls
 {
-    public partial class UCStudentRegisterHR : UserControl
+    public partial class DailyDiary : UserControl
     {
-        public UCStudentRegisterHR()
+        public DailyDiary()
         {
             InitializeComponent();
         }
