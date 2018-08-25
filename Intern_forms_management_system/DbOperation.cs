@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Intern_forms_management_system
 {
-    class DbOparation
+    class DbOperation
     {
         DbConnect db = new DbConnect();
         //form I-1 db oparation 

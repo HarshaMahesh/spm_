@@ -13,7 +13,7 @@ namespace Intern_forms_management_system.UserControls
 {
     public partial class UcForm1 : UserControl
     {
-        DbOparation dbo=new DbOparation();
+        DbOperation dbo=new DbOperation();
         public UcForm1()
         {
             InitializeComponent();
