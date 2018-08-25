@@ -1,19 +1,16 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{25B1F524-D748-470B-BAA0-02C542F06FC5}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>Intern_forms_management_system</RootNamespace>
-    <AssemblyName>Intern_forms_management_system</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{A99F6C3C-6B75-4A35-BEE8-C946EAB71848}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ConsoleApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -21,87 +18,36 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>Intern_forms_management_system</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>C:\Users\Windula\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
-    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
-    </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBConnection.cs" />
-    <Compile Include="Diary\DiaryEntry.cs" />
-    <Compile Include="Diary\NewEntryUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Diary\NewEntryUI.Designer.cs">
-      <DependentUpon>NewEntryUI.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Login\Login.cs" />
-    <Compile Include="Login\LoginUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login\LoginUI.Designer.cs">
-      <DependentUpon>LoginUI.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UIForms\DashBoard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UIForms\DashBoard.Designer.cs">
-      <DependentUpon>DashBoard.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Diary\NewEntryUI.resx">
-      <DependentUpon>NewEntryUI.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login\LoginUI.resx">
-      <DependentUpon>LoginUI.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="UIForms\DashBoard.resx">
-      <DependentUpon>DashBoard.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="App.config" />
     <None Include="Font\Corbert-Regular.otf" />
     <None Include="Font\Dense-Regular.otf" />
     <None Include="Font\Lato\Lato-Black.ttf" />
@@ -139,46 +85,89 @@
     <None Include="Font\Quicksand\Quicksand-LightItalic.otf" />
     <None Include="Font\Quicksand\Quicksand-Regular.otf" />
     <None Include="Font\Quicksand\Quicksand_Dash.otf" />
+    <None Include="Img\Dashboard\Untitled-1.psd" />
+    <None Include="Img\SplashScreen\Cover.psd" />
     <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    <None Include="Properties\Settings.settings" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DbConnect.cs" />
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="UserControls\Diary\DiaryEntry.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Login\Login.cs" />
+    <Compile Include="UserControls\Login\LoginUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\Login\LoginUI.Designer.cs">
+      <DependentUpon>LoginUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs" />
+    <Compile Include="Properties\Settings.Designer.cs" />
+    <Compile Include="UIForms\DashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForms\DashBoard.Designer.cs">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIForms\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIForms\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UcForm1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UcForm1.Designer.cs">
+      <DependentUpon>UcForm1.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Img\Dashboard\About_48px.png" />
-    <Content Include="Img\Dashboard\Circled User Male Skin Type 1 2_48px.png" />
-    <Content Include="Img\Dashboard\Data Configuration_48px.png" />
-    <Content Include="Img\Dashboard\Driver_48px.png" />
-    <Content Include="Img\Dashboard\Gift_48px.png" />
-    <Content Include="Img\Dashboard\Home.png" />
-    <Content Include="Img\Dashboard\Home_48px.png" />
-    <Content Include="Img\Dashboard\info.png" />
-    <Content Include="Img\Dashboard\Literature_48px.png" />
-    <Content Include="Img\Dashboard\logoDash.png" />
-    <Content Include="Img\Dashboard\Logout Rounded Left_48px.png" />
-    <Content Include="Img\Dashboard\Menu 2_50px.png" />
-    <Content Include="Img\Dashboard\Menu_50px.png" />
-    <Content Include="Img\Dashboard\Motorcycle_48px.png" />
-    <Content Include="Img\Dashboard\Report Card_48px.png" />
+    <Content Include="Icon\Dashboard\Home_20px.png" />
+    <Content Include="Icon\Dashboard\Home_25px.png" />
+    <Content Include="Icon\Dashboard\Home_48px.png" />
+    <Content Include="Icon\Dashboard\Home_50px.png" />
+    <Content Include="Img\Dashboard\dashboard1.jpg" />
     <Content Include="Img\Dashboard\Shutdown_48px.png" />
-    <Content Include="Img\Dashboard\Traffic Jam_48px.png" />
-    <Content Include="Img\Dashboard\Untitled-1.png" />
-    <Content Include="Img\Dashboard\User Location_48px.png" />
-    <Content Include="Img\Dashboard\Valet_48px.png" />
-    <Content Include="Img\Dashboard\Worker Male_48px.png" />
+    <Content Include="Img\Dashboard\side panel 2.jpg" />
+    <Content Include="Img\Dashboard\side panel.jpg" />
+    <Content Include="Img\Dashboard\SLIIT.png" />
+    <Content Include="Img\SplashScreen\09b24e31234507.564a1d23c07b4.gif" />
+    <Content Include="Img\SplashScreen\Animatition.gif" />
+    <Content Include="Img\SplashScreen\cd514331234507.564a1d2324e4e.gif" />
+    <Content Include="Img\SplashScreen\circular-water-fill-loading-animation.gif" />
+    <Content Include="Img\SplashScreen\Cover.png" />
+    <Content Include="Img\SplashScreen\E0jz.gif" />
+    <Content Include="Img\SplashScreen\giphy.gif" />
+    <Content Include="Img\SplashScreen\material-preloader.gif" />
+    <Content Include="Img\SplashScreen\splash.png" />
     <Content Include="MetroFramework.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Icon\" />
+    <EmbeddedResource Include="UserControls\Login\LoginUI.resx">
+      <DependentUpon>LoginUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx" />
+    <EmbeddedResource Include="UIForms\DashBoard.resx">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIForms\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UcForm1.resx">
+      <DependentUpon>UcForm1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
 </Project>

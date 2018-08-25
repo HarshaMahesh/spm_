@@ -1,5 +1,7 @@
+
 ﻿using Intern_forms_management_system;
 using Intern_forms_management_system.Login;
+using Intern_forms_management_system.UIForms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +20,11 @@ namespace Intern_forms_management_system
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginUI());
+
+            
+
+            Application.Run(new SplashScreen());
+
         }
     }
 }
