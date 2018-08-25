@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Intern_forms_management_system.Diary;
 
 namespace Intern_forms_management_system.UserControls
 {
     public partial class DailyDiary : UserControl
     {
+        private DiaryEntry entry;
         public DailyDiary()
         {
             InitializeComponent();
+            entry = new DiaryEntry();
         }
 
         private void bunifuCustomLabel2_Click(object sender, EventArgs e)
@@ -34,14 +37,14 @@ namespace Intern_forms_management_system.UserControls
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            //Button for inserting an employee to the Company Database
-            if (NameTextBox.Text == "" || NameTextBox.Text == "Enter name here....." || UniversityTextBox.Text == "" || AddressTextBox.Text == "" || EmailTextBox.Text == "" || TelephoneTextBox.Text == "" || DepartmentTextBox.Text == "")
+            //Button for inserting an diary entry to Database
+            if (entry.saveEntry())
             {
-                MessageBox.Show("Please Fill all the fields.....");
+                MessageBox.Show("Diary Entry Success");
 
             }
             else {
-
+                MessageBox.Show("Diary Entry Unsuccess");
             }
         }
 
