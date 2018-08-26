@@ -44,8 +44,8 @@ namespace Intern_forms_management_system.UserControls
             }
             else
             {
-                dbobject.registerIntern(StudentIDTextBox.Text);
-                MessageBox.Show("Inserted Successully");
+                dbobject.registerIntern(StudentIDTextBox.Text,NameTextBox.Text,UniversityTextBox.Text,EmailTextBox.Text,TelephoneTextBox.Text,DepartmentTextBox.Text,AddressTextBox.Text);
+                MessageBox.Show("Employee Inserted in to the database Successully");
             }
         }
 
