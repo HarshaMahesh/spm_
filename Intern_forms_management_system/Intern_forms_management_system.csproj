@@ -113,17 +113,17 @@
     </Compile>
     <Compile Include="UIForms\Login.cs" />
     <Compile Include="UserControls\DiaryEntry.cs" />
-    <Compile Include="UserControls\LoginUI.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\LoginUI.Designer.cs">
-      <DependentUpon>LoginUI.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\DailyDiary.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\DailyDiary.designer.cs">
       <DependentUpon>DailyDiary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UcForm1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UcForm1.designer.cs">
+      <DependentUpon>UcForm1.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -139,11 +139,11 @@
     <EmbeddedResource Include="UIForms\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\LoginUI.resx">
-      <DependentUpon>LoginUI.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DailyDiary.resx">
       <DependentUpon>DailyDiary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UcForm1.resx">
+      <DependentUpon>UcForm1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Font\Corbert-Regular.otf" />
     <None Include="Font\Dense-Regular.otf" />
