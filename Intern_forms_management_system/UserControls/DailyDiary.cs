@@ -18,6 +18,7 @@ namespace Intern_forms_management_system.UserControls
         {
             InitializeComponent();
             entry = new DiaryEntry();
+            bunifuCustomLabelTime.Text = entry.getNowTime();
         }
 
         private void bunifuCustomLabel2_Click(object sender, EventArgs e)
@@ -43,7 +44,8 @@ namespace Intern_forms_management_system.UserControls
                 MessageBox.Show("Diary Entry Success");
 
             }
-            else {
+            else
+            {
                 MessageBox.Show("Diary Entry Unsuccess");
             }
         }
