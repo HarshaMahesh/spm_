@@ -30,9 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DailyDiary));
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.ClearEmployee = new ns1.BunifuFlatButton();
             this.UpdateEmployee = new ns1.BunifuFlatButton();
             this.bunifuFlatButton3 = new ns1.BunifuFlatButton();
@@ -44,12 +41,14 @@
             this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuCustomLabelUser = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabelTime = new ns1.BunifuCustomLabel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.bunifuCards1.SuspendLayout();
-            this.bunifuCards2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            this.bunifuCards2.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuCards1
@@ -58,9 +57,8 @@
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.Tomato;
-            this.bunifuCards1.Controls.Add(this.bunifuCustomLabelTime);
-            this.bunifuCards1.Controls.Add(this.bunifuCustomLabelUser);
             this.bunifuCards1.Controls.Add(this.bunifuCards2);
+            this.bunifuCards1.Controls.Add(this.monthCalendar1);
             this.bunifuCards1.Controls.Add(this.dateTimePicker1);
             this.bunifuCards1.Controls.Add(this.ClearEmployee);
             this.bunifuCards1.Controls.Add(this.UpdateEmployee);
@@ -78,36 +76,6 @@
             this.bunifuCards1.Size = new System.Drawing.Size(1068, 571);
             this.bunifuCards1.TabIndex = 11;
             this.bunifuCards1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards1_Paint);
-            // 
-            // bunifuCards2
-            // 
-            this.bunifuCards2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(53)))), ((int)(((byte)(147)))));
-            this.bunifuCards2.BorderRadius = 5;
-            this.bunifuCards2.BottomSahddow = true;
-            this.bunifuCards2.color = System.Drawing.Color.Tomato;
-            this.bunifuCards2.Controls.Add(this.richTextBox1);
-            this.bunifuCards2.LeftSahddow = false;
-            this.bunifuCards2.Location = new System.Drawing.Point(441, 32);
-            this.bunifuCards2.Name = "bunifuCards2";
-            this.bunifuCards2.RightSahddow = true;
-            this.bunifuCards2.ShadowDepth = 20;
-            this.bunifuCards2.Size = new System.Drawing.Size(605, 397);
-            this.bunifuCards2.TabIndex = 24;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(22, 30);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(565, 347);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(141, 326);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 22;
             // 
             // ClearEmployee
             // 
@@ -294,9 +262,9 @@
             this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.bunifuCustomLabel5.Location = new System.Drawing.Point(17, 330);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(54, 15);
+            this.bunifuCustomLabel5.Size = new System.Drawing.Size(33, 15);
             this.bunifuCustomLabel5.TabIndex = 5;
-            this.bunifuCustomLabel5.Text = "Set Date";
+            this.bunifuCustomLabel5.Text = "Date";
             // 
             // bunifuCustomLabel3
             // 
@@ -304,9 +272,9 @@
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.bunifuCustomLabel3.Location = new System.Drawing.Point(17, 118);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(19, 15);
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(33, 15);
             this.bunifuCustomLabel3.TabIndex = 3;
-            this.bunifuCustomLabel3.Text = "Hi";
+            this.bunifuCustomLabel3.Text = "Date";
             // 
             // RegisterEmployeeForm
             // 
@@ -361,25 +329,41 @@
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 10;
             // 
-            // bunifuCustomLabelUser
+            // dateTimePicker1
             // 
-            this.bunifuCustomLabelUser.AutoSize = true;
-            this.bunifuCustomLabelUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.bunifuCustomLabelUser.Location = new System.Drawing.Point(138, 118);
-            this.bunifuCustomLabelUser.Name = "bunifuCustomLabelUser";
-            this.bunifuCustomLabelUser.Size = new System.Drawing.Size(65, 15);
-            this.bunifuCustomLabelUser.TabIndex = 25;
-            this.bunifuCustomLabelUser.Text = "Username";
+            this.dateTimePicker1.Location = new System.Drawing.Point(141, 326);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 22;
             // 
-            // bunifuCustomLabelTime
+            // monthCalendar1
             // 
-            this.bunifuCustomLabelTime.AutoSize = true;
-            this.bunifuCustomLabelTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.bunifuCustomLabelTime.Location = new System.Drawing.Point(138, 186);
-            this.bunifuCustomLabelTime.Name = "bunifuCustomLabelTime";
-            this.bunifuCustomLabelTime.Size = new System.Drawing.Size(35, 15);
-            this.bunifuCustomLabelTime.TabIndex = 26;
-            this.bunifuCustomLabelTime.Text = "Time";
+            this.monthCalendar1.Location = new System.Drawing.Point(141, 118);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 23;
+            // 
+            // bunifuCards2
+            // 
+            this.bunifuCards2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(53)))), ((int)(((byte)(147)))));
+            this.bunifuCards2.BorderRadius = 5;
+            this.bunifuCards2.BottomSahddow = true;
+            this.bunifuCards2.color = System.Drawing.Color.Tomato;
+            this.bunifuCards2.Controls.Add(this.richTextBox1);
+            this.bunifuCards2.LeftSahddow = false;
+            this.bunifuCards2.Location = new System.Drawing.Point(441, 32);
+            this.bunifuCards2.Name = "bunifuCards2";
+            this.bunifuCards2.RightSahddow = true;
+            this.bunifuCards2.ShadowDepth = 20;
+            this.bunifuCards2.Size = new System.Drawing.Size(605, 397);
+            this.bunifuCards2.TabIndex = 24;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(22, 30);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(565, 347);
+            this.richTextBox1.TabIndex = 1;
+            this.richTextBox1.Text = "";
             // 
             // DailyDiary
             // 
@@ -392,9 +376,9 @@
             this.Size = new System.Drawing.Size(1133, 653);
             this.bunifuCards1.ResumeLayout(false);
             this.bunifuCards1.PerformLayout();
-            this.bunifuCards2.ResumeLayout(false);
             this.bunifuGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            this.bunifuCards2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -415,8 +399,7 @@
         private ns1.BunifuFlatButton UpdateEmployee;
         private Bunifu.Framework.UI.BunifuCards bunifuCards2;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private ns1.BunifuCustomLabel bunifuCustomLabelTime;
-        private ns1.BunifuCustomLabel bunifuCustomLabelUser;
     }
 }

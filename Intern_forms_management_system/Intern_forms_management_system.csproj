@@ -99,12 +99,6 @@
     <Compile Include="UIForms\DashBoard.Designer.cs">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </Compile>
-    <Compile Include="UIForms\LoginIFMS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UIForms\LoginIFMS.Designer.cs">
-      <DependentUpon>LoginIFMS.cs</DependentUpon>
-    </Compile>
     <Compile Include="UIForms\SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,9 +126,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIForms\DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UIForms\LoginIFMS.resx">
-      <DependentUpon>LoginIFMS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIForms\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
