@@ -128,6 +128,17 @@ namespace Intern_forms_management_system.UserControls
                     cgpatbox.Text = mdr.GetString("cgpa");
                     yeartbox.Text = mdr.GetString("year");
                     semtbox.Text = mdr.GetString("semester");
+
+                    
+                    stdnametbox.Enabled= false;
+                    addresstbox.Enabled = false;
+                    mphonetbox.Enabled = false; ;
+                    emailtbox.Enabled = false; ;
+                    stdnametbox.BackColor = System.Drawing.SystemColors.Window;
+                    addresstbox.BackColor = System.Drawing.SystemColors.Window;
+                    mphonetbox.BackColor = System.Drawing.SystemColors.Window;
+                    emailtbox.BackColor = System.Drawing.SystemColors.Window;
+
                 }
                 else
                 {
@@ -143,6 +154,14 @@ namespace Intern_forms_management_system.UserControls
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
             studentEmpty();
+        }
+
+        private void bunifuFlatButton5_Click(object sender, EventArgs e)
+        {
+
+            double cgpa = Convert.ToDouble(cgpatbox.Text);
+            dbo.updateStudentForm1(Sidtxtbox.Text,cgpa, Convert.ToInt32(hphonetbox.Text), semtbox.Text, yeartbox.Text);
+            MetroMessageBox.Show(this, "Successfully Updated", "", MessageBoxButtons.OK);
         }
     }
 }

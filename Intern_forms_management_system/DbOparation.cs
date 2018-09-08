@@ -36,6 +36,29 @@ namespace Intern_forms_management_system
                 Console.Write(e);
             }
         }
+        public void updateStudentForm1(string id, double cgpa, int homephone, string semester, string year)
+        {
+
+            try
+            {
+                db.Connection();
+                String upquery = "UPDATE intern_student SET homePhone=@f2,semester=@f3,cgpa=@f4,year=@f5 WHERE studentId='" + id + "'";
+                MySqlCommand cmd = new MySqlCommand(upquery, db.con);
+                DataTable table = new DataTable();
+                cmd.Parameters.AddWithValue("@f2", homephone);
+                cmd.Parameters.AddWithValue("@f3", semester);
+                cmd.Parameters.AddWithValue("@f4", cgpa);
+                cmd.Parameters.AddWithValue("@f5", year);
+
+                db.con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+
+                Console.Write(e);
+            }
+        }
         public void searchSudent(string id,string sname,string saddress,string sphone,string email) {
 
           
