@@ -17,7 +17,7 @@ namespace Intern_forms_management_system
         {
             try
             {
-                con = new MySqlConnection("datasource=localhost;port=3306;Initial Catalog='ifms';username=root;password=;Convert Zero Datetime=True");
+                con = new MySqlConnection("datasource=localhost;port=3306;Initial Catalog='form_management';username=root;password=;Convert Zero Datetime=True");
             }
             catch (Exception e)
             {
