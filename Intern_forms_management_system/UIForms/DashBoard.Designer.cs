@@ -1,4 +1,6 @@
-﻿namespace Intern_forms_management_system.UIForms
+﻿using BunifuAnimatorNS;
+
+namespace Intern_forms_management_system.UIForms
 {
     partial class DashBoard
     {
@@ -47,6 +49,7 @@
             this.StudentRegBtn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.SidePanal = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.sidepanelbtn = new ns1.BunifuImageButton();
+//            this.doubleBitmapControl1 = new BunifuAnimatorNS.DoubleBitmapControl();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -72,6 +75,7 @@
             // panel2
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            //this.panel2.Controls.Add(this.doubleBitmapControl1);
             this.panel2.Controls.Add(this.bunifuCustomLabel2);
             this.panel2.Location = new System.Drawing.Point(282, 131);
             this.panel2.Name = "panel2";
@@ -456,6 +460,15 @@
             this.sidepanelbtn.TabStop = false;
             this.sidepanelbtn.Zoom = 50;
             // 
+            //// doubleBitmapControl1
+            //// 
+            //this.doubleBitmapControl1.Location = new System.Drawing.Point(38, 21);
+            //this.doubleBitmapControl1.Name = "doubleBitmapControl1";
+            //this.doubleBitmapControl1.Size = new System.Drawing.Size(75, 23);
+            //this.doubleBitmapControl1.TabIndex = 3;
+            //this.doubleBitmapControl1.Text = "doubleBitmapControl1";
+            //this.doubleBitmapControl1.Visible = false;
+            //// 
             // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -504,6 +517,7 @@
         private Bunifu.Framework.UI.BunifuGradientPanel SidePanal;
         private ns1.BunifuImageButton sidepanelbtn;
         private Bunifu.Framework.UI.BunifuFlatButton homeBtn;
+        //private DoubleBitmapControl doubleBitmapControl1;
         // private BunifuTransition SidePanalAnimation;
     }
 }

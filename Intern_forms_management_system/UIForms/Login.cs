@@ -6,13 +6,13 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Intern_forms_management_system.Login
+namespace Intern_forms_management_system.UIForms
 {
     class Login
     {
         //decalre properties 
-        public string Username { get; set; }
-        public string Userpassword { get; set; }
+        private string Username { get; set; }
+        private string Userpassword { get; set; }
 
         //intialise  
         public Login(string user, string pass)
