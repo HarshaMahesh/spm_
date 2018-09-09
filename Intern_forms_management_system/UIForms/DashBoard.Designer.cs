@@ -73,9 +73,9 @@
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.Controls.Add(this.bunifuCustomLabel2);
-            this.panel2.Location = new System.Drawing.Point(282, 131);
+            this.panel2.Location = new System.Drawing.Point(280, 103);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(847, 512);
+            this.panel2.Size = new System.Drawing.Size(847, 521);
             this.panel2.TabIndex = 5;
             // 
             // bunifuCustomLabel2
@@ -97,7 +97,7 @@
             this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(125)))), ((int)(((byte)(139)))));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(359, 45);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(359, 13);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(597, 40);
             this.bunifuCustomLabel1.TabIndex = 0;
@@ -109,7 +109,7 @@
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(1062, 20);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(1062, 18);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Size = new System.Drawing.Size(43, 35);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -131,7 +131,7 @@
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(5, 1);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1127, 124);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1127, 70);
             this.bunifuGradientPanel1.TabIndex = 0;
             this.bunifuGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuGradientPanel1_Paint);
             // 
@@ -358,7 +358,7 @@
             this.bunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(143)))));
             this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton2.BorderRadius = 0;
-            this.bunifuFlatButton2.ButtonText = "Form 1-1";
+            this.bunifuFlatButton2.ButtonText = "Form I-1";
             this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
@@ -381,7 +381,7 @@
             this.bunifuFlatButton2.selected = false;
             this.bunifuFlatButton2.Size = new System.Drawing.Size(262, 48);
             this.bunifuFlatButton2.TabIndex = 6;
-            this.bunifuFlatButton2.Text = "Form 1-1";
+            this.bunifuFlatButton2.Text = "Form I-1";
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
