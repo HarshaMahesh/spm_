@@ -14,7 +14,8 @@ namespace Intern_forms_management_system.UIForms
 
             
     {
-        UserControls.UcForm1 form1; 
+        UserControls.UcForm1 form1;
+        UserControls.UCStudentRegisterHR reg;
         DbConnect db;
         public DashBoard()
         {
@@ -22,6 +23,7 @@ namespace Intern_forms_management_system.UIForms
 
             db = new DbConnect();
             form1 = new UserControls.UcForm1();
+            reg = new UserControls.UCStudentRegisterHR();
         }
 
         private void DashBoard_Load(object sender, EventArgs e)
@@ -56,7 +58,23 @@ namespace Intern_forms_management_system.UIForms
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-           
+            if (SidePanal.Width == 277)
+            {
+                sidepanelbtn.Visible = true;
+                logo.Visible = false;
+                SidePanal.Width = 57;
+                // SidePanalAnimation.ShowSync(SidePanal);
+            }
+            else
+            {
+                sidepanelbtn.Visible = false;
+                logo.Visible = true;
+                SidePanal.Width = 277;
+            }
+            panel2.Hide();
+            reg.Show();
+            reg.Dock = DockStyle.Fill;
+            panel1.Controls.Add(reg);
         }
 
         private void SidePanal_Paint(object sender, PaintEventArgs e)
