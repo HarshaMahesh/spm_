@@ -23,10 +23,7 @@ namespace Intern_forms_management_system.UserControls
             InitializeComponent();
         }
         public void studentEmpty() {
-            stdnametbox.Text ="";
-            addresstbox.Text = "";
-            mphonetbox.Text = "";
-            emailtbox.Text = "";
+                     
             hphonetbox.Text = "";
             cgpatbox.Text = "";
             yeartbox.Text = "";
