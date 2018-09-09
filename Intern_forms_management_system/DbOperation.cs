@@ -1,6 +1,8 @@
-﻿using MySql.Data.MySqlClient;
+﻿using MetroFramework;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,16 +15,56 @@ namespace Intern_forms_management_system
         DbConnect db = new DbConnect();
         //form I-1 db oparation 
         
-        public void addStudentForm1(int id) {
+        public void addStudentForm1(string id,double cgpa,int homephone,string semester,string year) {
 
-            db.Connection();
-            String query1 = "Insert into () values(@f1,@f2)";
-            MySqlCommand cmd = new MySqlCommand(query1, db.con);
-            cmd.Parameters.AddWithValue("@f1",id);
-            
-            db.con.Open();
-            cmd.ExecuteNonQuery();
-              
+            try
+            {
+                db.Connection();
+                String upquery = "UPDATE intern_student SET homePhone=@f2,semester=@f3,cgpa=@f4,year=@f5 WHERE studentId='"+id+"'";
+                MySqlCommand cmd = new MySqlCommand(upquery, db.con);
+                DataTable table = new DataTable();
+                cmd.Parameters.AddWithValue("@f2", homephone);
+                cmd.Parameters.AddWithValue("@f3", semester);
+                cmd.Parameters.AddWithValue("@f4", cgpa);
+                cmd.Parameters.AddWithValue("@f5", year);
+
+                db.con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch(Exception e){
+
+                Console.Write(e);
+            }
+        }
+        public void updateStudentForm1(string id, double cgpa, int homephone, string semester, string year)
+        {
+
+            try
+            {
+                db.Connection();
+                String upquery = "UPDATE intern_student SET homePhone=@f2,semester=@f3,cgpa=@f4,year=@f5 WHERE studentId='" + id + "'";
+                MySqlCommand cmd = new MySqlCommand(upquery, db.con);
+                DataTable table = new DataTable();
+                cmd.Parameters.AddWithValue("@f2", homephone);
+                cmd.Parameters.AddWithValue("@f3", semester);
+                cmd.Parameters.AddWithValue("@f4", cgpa);
+                cmd.Parameters.AddWithValue("@f5", year);
+
+                db.con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+
+                Console.Write(e);
+            }
+        }
+        public void searchSudent(string id,string sname,string saddress,string sphone,string email) {
+
+          
+
+
+
         }
         public void addEmployee(string name,string address,string sname, string title, string sphone, string semail, string esname) {
 
@@ -41,12 +83,11 @@ namespace Intern_forms_management_system
             cmd2.Parameters.AddWithValue("@f3", sphone);
             cmd2.Parameters.AddWithValue("@f4", semail);
             cmd2.Parameters.AddWithValue("@f5", esname);
-           // db.con.Open();
             cmd2.ExecuteNonQuery();
-
-
-
+            
         } 
 
     }
+
+    
 }
