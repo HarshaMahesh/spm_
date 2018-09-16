@@ -14,12 +14,7 @@ namespace Intern_forms_management_system.UIForms
 
             
     {
-        UserControls.UcForm1 form1;
-        UserControls.UCStudentRegisterHR stdReg;
-        UserControls.DailyDiary form3;
-        UserControls.SupervisorDailyDiary form32;
-
-        UserControls.UCInernshipReport form33;
+        UserControls.UcForm1 form1; 
         DbConnect db;
         public DashBoard()
         {
@@ -153,13 +148,7 @@ namespace Intern_forms_management_system.UIForms
            sidepanelbtn.Visible = false;
            logo.Visible = true;
            SidePanal.Width = 277;
-
-            form33.Hide();
-            form32.Hide();
-            stdReg.Hide();
-            form3.Hide();
-            form1.Hide();
-            form1.Hide();
+            
             panel2.Show();
         }
 
@@ -196,86 +185,6 @@ namespace Intern_forms_management_system.UIForms
             form1.Show();
             form1.Dock = DockStyle.Fill;
             panel1.Controls.Add(form1);
-        }
-
-        private void bunifuFlatButton3_Click(object sender, EventArgs e)
-        {
-            if (SidePanal.Width == 277)
-            {
-                sidepanelbtn.Visible = true;
-                logo.Visible = false;
-                SidePanal.Width = 57;
-                // SidePanalAnimation.ShowSync(SidePanal);
-            }
-            else
-            {
-                sidepanelbtn.Visible = false;
-                logo.Visible = true;
-                SidePanal.Width = 277;
-            }
-
-            panel2.Hide();
-            form33.Hide();
-            stdReg.Hide();
-            form32.Hide();
-            form1.Hide();
-            form3.Show();
-            form3.Dock = DockStyle.Fill;
-            panel1.Controls.Add(form3);
-        }
-
-        private void bunifuFlatButton4_Click(object sender, EventArgs e)
-        {
-            
-                if (SidePanal.Width == 277)
-            {
-                sidepanelbtn.Visible = true;
-                logo.Visible = false;
-                SidePanal.Width = 57;
-                // SidePanalAnimation.ShowSync(SidePanal);
-            }
-            else
-            {
-                sidepanelbtn.Visible = false;
-                logo.Visible = true;
-                SidePanal.Width = 277;
-            }
-
-            panel2.Hide();
-            stdReg.Hide();
-            form1.Hide();
-            form33.Hide();
-            form3.Hide();
-            form32.Show();
-            form32.Dock = DockStyle.Fill;
-            panel1.Controls.Add(form32);
-        }
-
-        private void bunifuFlatButton5_Click(object sender, EventArgs e) { 
-      
-            if (SidePanal.Width == 277)
-            {
-                sidepanelbtn.Visible = true;
-                logo.Visible = false;
-                SidePanal.Width = 57;
-                // SidePanalAnimation.ShowSync(SidePanal);
-            }
-            else
-            {
-                sidepanelbtn.Visible = false;
-                logo.Visible = true;
-                SidePanal.Width = 277;
-            }
-
-            panel2.Hide();
-            stdReg.Hide();
-            form1.Hide();
-            form3.Hide();
-            form32.Hide();
-            form33.Show();
-            form33.Dock = DockStyle.Fill;
-            panel1.Controls.Add(form33);
-
         }
     }
 }
