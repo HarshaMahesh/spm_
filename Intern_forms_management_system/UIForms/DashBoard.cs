@@ -14,6 +14,7 @@ namespace Intern_forms_management_system.UIForms
 
             
     {
+        //db connection
         UserControls.UcForm1 form1; 
         DbConnect db;
         public DashBoard()

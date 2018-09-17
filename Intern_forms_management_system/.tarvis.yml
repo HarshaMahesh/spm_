@@ -1,0 +1,10 @@
+language: c#
+rvm:
+ - 2.2
+ - jruby
+
+ solution:
+
+ Install:
+ 
+ Script:
