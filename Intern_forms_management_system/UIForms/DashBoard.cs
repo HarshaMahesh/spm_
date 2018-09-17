@@ -153,7 +153,13 @@ namespace Intern_forms_management_system.UIForms
            sidepanelbtn.Visible = false;
            logo.Visible = true;
            SidePanal.Width = 277;
-            
+
+            form33.Hide();
+            form32.Hide();
+            stdReg.Hide();
+            form3.Hide();
+            form1.Hide();
+            form1.Hide();
             panel2.Show();
         }
 
@@ -241,14 +247,13 @@ namespace Intern_forms_management_system.UIForms
             form33.Hide();
             form3.Hide();
             form32.Show();
-            form3.Dock = DockStyle.Fill;
-            panel1.Controls.Add(form3);
+            form32.Dock = DockStyle.Fill;
+            panel1.Controls.Add(form32);
         }
 
-        private void bunifuFlatButton5_Click(object sender, EventArgs e)
-        {
-            form32
-                if (SidePanal.Width == 277)
+        private void bunifuFlatButton5_Click(object sender, EventArgs e) { 
+      
+            if (SidePanal.Width == 277)
             {
                 sidepanelbtn.Visible = true;
                 logo.Visible = false;
@@ -268,8 +273,8 @@ namespace Intern_forms_management_system.UIForms
             form3.Hide();
             form32.Hide();
             form33.Show();
-            form3.Dock = DockStyle.Fill;
-            panel1.Controls.Add(form3);
+            form33.Dock = DockStyle.Fill;
+            panel1.Controls.Add(form33);
 
         }
     }

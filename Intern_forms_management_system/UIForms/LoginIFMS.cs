@@ -162,6 +162,7 @@ namespace Intern_forms_management_system.UIForms
             this.Controls.Add(this.btnLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginIFMS";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -170,16 +171,14 @@ namespace Intern_forms_management_system.UIForms
 
         private void btnLogin_Click_1(object sender, EventArgs e)
         {
-            //Login login = new Login();
-            //MessageBox.Show(txtUsername.Text);
-            //MessageBox.Show(txtPassword.Text);
-
-            //if(login.IsLoggedIn(txtUsername.Text, txtPassword.Text))
-            //{
-
-            //}
-            DashBoard ds = new DashBoard();
-            ds.Visible = true;
+            Login login = new Login();           
+            if (login.IsLoggedIn(txtUsername.Text, txtPassword.Text))
+            {
+                
+                DashBoard ds = new DashBoard();
+                ds.Visible = true;
+                this.Visible = false;
+            }
         }
     }
 }
