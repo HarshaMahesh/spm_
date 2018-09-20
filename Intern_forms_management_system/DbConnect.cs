@@ -22,6 +22,7 @@ namespace Intern_forms_management_system
             catch (Exception e)
             {
                 Console.Write(e);
+                
             }
         }
     }

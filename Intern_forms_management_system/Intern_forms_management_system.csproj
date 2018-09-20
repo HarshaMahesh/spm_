@@ -32,12 +32,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\HARSHA MAHESH\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>C:\Users\Hp\Desktop\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\..\..\..\..\ITP Project\New folder\Bunifu_UI_v1.52\Bunifu_UI_v1.52.dll</HintPath>
+      <HintPath>C:\Users\Hp\Desktop\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
@@ -49,7 +48,10 @@
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="MySql.Data, Version=6.9.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.7.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 6.7.9\Assemblies\v4.5\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
@@ -115,6 +117,7 @@
     <Compile Include="UserControls\UcForm1.Designer.cs">
       <DependentUpon>UcForm1.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="UserControls\UCInernshipReport.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -125,6 +128,12 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\UCStudentRegisterHR.designer.cs">
+=======
+    <Compile Include="UserControls\UCStudentRegisterHR.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCStudentRegisterHR.Designer.cs">
+>>>>>>> master
       <DependentUpon>UCStudentRegisterHR.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -150,9 +159,12 @@
     <EmbeddedResource Include="UserControls\UcForm1.resx">
       <DependentUpon>UcForm1.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="UserControls\UCInernshipReport.resx">
       <DependentUpon>UCInernshipReport.cs</DependentUpon>
     </EmbeddedResource>
+=======
+>>>>>>> master
     <EmbeddedResource Include="UserControls\UCStudentRegisterHR.resx">
       <DependentUpon>UCStudentRegisterHR.cs</DependentUpon>
     </EmbeddedResource>

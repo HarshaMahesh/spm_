@@ -7,8 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 using MetroFramework;
 using MySql.Data.MySqlClient;
+
+//using MetroFramework;
+
 
 namespace Intern_forms_management_system.UserControls
 {
@@ -83,8 +87,12 @@ namespace Intern_forms_management_system.UserControls
         private void bunifuFlatButton8_Click(object sender, EventArgs e)
         {
             dbo.addEmployee(Enametbox.Text,Eaddresstbox.Text,snametbox.Text,stitletbox.Text,sphonetbox.Text,semailtbox.Text,esnametbox.Text);
+
             MetroMessageBox.Show(this, "Successfully Inserted","", MessageBoxButtons.OK);
 
+
+
+            //MetroMessageBox.Show(this, "Successfully Inserted","", MessageBoxButtons.OK);
 
         }
 
@@ -160,6 +168,11 @@ namespace Intern_forms_management_system.UserControls
             double cgpa = Convert.ToDouble(cgpatbox.Text);
             dbo.updateStudentForm1(Sidtxtbox.Text,cgpa, Convert.ToInt32(hphonetbox.Text), semtbox.Text, yeartbox.Text);
             MetroMessageBox.Show(this, "Successfully Updated", "", MessageBoxButtons.OK);
+        }
+
+        private void stdnametbox_OnValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

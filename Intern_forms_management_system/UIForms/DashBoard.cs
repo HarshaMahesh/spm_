@@ -15,10 +15,14 @@ namespace Intern_forms_management_system.UIForms
             
     {
         UserControls.UcForm1 form1;
+
         UserControls.UCStudentRegisterHR stdReg;
         UserControls.DailyDiary form3;
         UserControls.SupervisorDailyDiary form32;
         UserControls.UCInernshipReport form33;
+
+        UserControls.UCStudentRegisterHR reg;
+
         DbConnect db;
         public DashBoard()
         {
@@ -26,10 +30,14 @@ namespace Intern_forms_management_system.UIForms
 
             db = new DbConnect();
             form1 = new UserControls.UcForm1();
+
             stdReg = new UserControls.UCStudentRegisterHR();
             form3 = new UserControls.DailyDiary();
             form32 = new UserControls.SupervisorDailyDiary();
             form33 = new UserControls.UCInernshipReport();
+
+            reg = new UserControls.UCStudentRegisterHR();
+
         }
 
         private void DashBoard_Load(object sender, EventArgs e)
@@ -77,6 +85,7 @@ namespace Intern_forms_management_system.UIForms
                 logo.Visible = true;
                 SidePanal.Width = 277;
             }
+
             form3.Hide();
             form32.Hide();
             form33.Hide();
@@ -85,6 +94,12 @@ namespace Intern_forms_management_system.UIForms
             stdReg.Show();
             stdReg.Dock = DockStyle.Fill;
             panel1.Controls.Add(stdReg);
+
+            panel2.Hide();
+            reg.Show();
+            reg.Dock = DockStyle.Fill;
+            panel1.Controls.Add(reg);
+
         }
 
         private void SidePanal_Paint(object sender, PaintEventArgs e)
