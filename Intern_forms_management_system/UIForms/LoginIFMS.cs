@@ -163,6 +163,7 @@ namespace Intern_forms_management_system.UIForms
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginIFMS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.LoginIFMS_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -179,6 +180,11 @@ namespace Intern_forms_management_system.UIForms
                 ds.Visible = true;
                 this.Visible = false;
             }
+        }
+
+        private void LoginIFMS_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
