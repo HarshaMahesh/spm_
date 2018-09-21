@@ -14,8 +14,14 @@ namespace Intern_forms_management_system.UIForms
 
             
     {
-        UserControls.UcForm1 form1; 
-        DbConnect db;
+        UserControls.UcForm1 form1;
+        UserControls.UCStudentRegisterHR stdReg;
+        UserControls.DailyDiary form3;
+        UserControls.SupervisorDailyDiary form32;
+            UserControls.UCInernshipReport form33;
+
+
+       DbConnect db;
         public DashBoard()
         {
             InitializeComponent();
