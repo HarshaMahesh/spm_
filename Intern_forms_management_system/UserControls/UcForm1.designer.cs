@@ -35,6 +35,8 @@
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.bunifuFlatButton10 = new ns1.BunifuFlatButton();
+            this.bunifuMetroTextbox1 = new ns1.BunifuMetroTextbox();
             this.bunifuFlatButton9 = new ns1.BunifuFlatButton();
             this.bunifuFlatButton4 = new ns1.BunifuFlatButton();
             this.bunifuFlatButton7 = new ns1.BunifuFlatButton();
@@ -92,8 +94,7 @@
             this.bunifuSeparator1 = new ns1.BunifuSeparator();
             this.stdnametbox = new ns1.BunifuMaterialTextbox();
             this.bunifuCustomLabel1 = new ns1.BunifuCustomLabel();
-            this.bunifuFlatButton10 = new ns1.BunifuFlatButton();
-            this.bunifuMetroTextbox1 = new ns1.BunifuMetroTextbox();
+            this.bunifuFlatButton11 = new ns1.BunifuFlatButton();
             this.SidePanal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
@@ -176,6 +177,7 @@
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.Tomato;
+            this.bunifuCards1.Controls.Add(this.bunifuFlatButton11);
             this.bunifuCards1.Controls.Add(this.bunifuFlatButton10);
             this.bunifuCards1.Controls.Add(this.bunifuMetroTextbox1);
             this.bunifuCards1.Controls.Add(this.bunifuFlatButton9);
@@ -242,6 +244,57 @@
             this.bunifuCards1.ShadowDepth = 20;
             this.bunifuCards1.Size = new System.Drawing.Size(1068, 571);
             this.bunifuCards1.TabIndex = 8;
+            // 
+            // bunifuFlatButton10
+            // 
+            this.bunifuFlatButton10.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(143)))));
+            this.bunifuFlatButton10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton10.BorderRadius = 0;
+            this.bunifuFlatButton10.ButtonText = "     Search ";
+            this.bunifuFlatButton10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton10.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton10.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton10.Iconimage = null;
+            this.bunifuFlatButton10.Iconimage_right = null;
+            this.bunifuFlatButton10.Iconimage_right_Selected = null;
+            this.bunifuFlatButton10.Iconimage_Selected = null;
+            this.bunifuFlatButton10.IconMarginLeft = 0;
+            this.bunifuFlatButton10.IconMarginRight = 0;
+            this.bunifuFlatButton10.IconRightVisible = true;
+            this.bunifuFlatButton10.IconRightZoom = 0D;
+            this.bunifuFlatButton10.IconVisible = true;
+            this.bunifuFlatButton10.IconZoom = 90D;
+            this.bunifuFlatButton10.IsTab = false;
+            this.bunifuFlatButton10.Location = new System.Drawing.Point(978, 51);
+            this.bunifuFlatButton10.Name = "bunifuFlatButton10";
+            this.bunifuFlatButton10.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(143)))));
+            this.bunifuFlatButton10.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.bunifuFlatButton10.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton10.selected = false;
+            this.bunifuFlatButton10.Size = new System.Drawing.Size(81, 32);
+            this.bunifuFlatButton10.TabIndex = 64;
+            this.bunifuFlatButton10.Text = "     Search ";
+            this.bunifuFlatButton10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButton10.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton10.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // bunifuMetroTextbox1
+            // 
+            this.bunifuMetroTextbox1.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(166)))), ((int)(((byte)(154)))));
+            this.bunifuMetroTextbox1.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMetroTextbox1.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(166)))), ((int)(((byte)(154)))));
+            this.bunifuMetroTextbox1.BorderThickness = 3;
+            this.bunifuMetroTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.White;
+            this.bunifuMetroTextbox1.isPassword = false;
+            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(744, 46);
+            this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
+            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(227, 37);
+            this.bunifuMetroTextbox1.TabIndex = 63;
+            this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuFlatButton9
             // 
@@ -1217,56 +1270,39 @@
             this.bunifuCustomLabel1.TabIndex = 1;
             this.bunifuCustomLabel1.Text = "Form I-1";
             // 
-            // bunifuFlatButton10
+            // bunifuFlatButton11
             // 
-            this.bunifuFlatButton10.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(143)))));
-            this.bunifuFlatButton10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton10.BorderRadius = 0;
-            this.bunifuFlatButton10.ButtonText = "     Search ";
-            this.bunifuFlatButton10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton10.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton10.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton10.Iconimage = null;
-            this.bunifuFlatButton10.Iconimage_right = null;
-            this.bunifuFlatButton10.Iconimage_right_Selected = null;
-            this.bunifuFlatButton10.Iconimage_Selected = null;
-            this.bunifuFlatButton10.IconMarginLeft = 0;
-            this.bunifuFlatButton10.IconMarginRight = 0;
-            this.bunifuFlatButton10.IconRightVisible = true;
-            this.bunifuFlatButton10.IconRightZoom = 0D;
-            this.bunifuFlatButton10.IconVisible = true;
-            this.bunifuFlatButton10.IconZoom = 90D;
-            this.bunifuFlatButton10.IsTab = false;
-            this.bunifuFlatButton10.Location = new System.Drawing.Point(978, 51);
-            this.bunifuFlatButton10.Name = "bunifuFlatButton10";
-            this.bunifuFlatButton10.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(143)))));
-            this.bunifuFlatButton10.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton10.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton10.selected = false;
-            this.bunifuFlatButton10.Size = new System.Drawing.Size(81, 32);
-            this.bunifuFlatButton10.TabIndex = 64;
-            this.bunifuFlatButton10.Text = "     Search ";
-            this.bunifuFlatButton10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton10.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton10.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // bunifuMetroTextbox1
-            // 
-            this.bunifuMetroTextbox1.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(166)))), ((int)(((byte)(154)))));
-            this.bunifuMetroTextbox1.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox1.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(166)))), ((int)(((byte)(154)))));
-            this.bunifuMetroTextbox1.BorderThickness = 3;
-            this.bunifuMetroTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.White;
-            this.bunifuMetroTextbox1.isPassword = false;
-            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(744, 46);
-            this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
-            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(227, 37);
-            this.bunifuMetroTextbox1.TabIndex = 63;
-            this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuFlatButton11.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(143)))));
+            this.bunifuFlatButton11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton11.BorderRadius = 0;
+            this.bunifuFlatButton11.ButtonText = "     Search ";
+            this.bunifuFlatButton11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton11.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton11.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton11.Iconimage = null;
+            this.bunifuFlatButton11.Iconimage_right = null;
+            this.bunifuFlatButton11.Iconimage_right_Selected = null;
+            this.bunifuFlatButton11.Iconimage_Selected = null;
+            this.bunifuFlatButton11.IconMarginLeft = 0;
+            this.bunifuFlatButton11.IconMarginRight = 0;
+            this.bunifuFlatButton11.IconRightVisible = true;
+            this.bunifuFlatButton11.IconRightZoom = 0D;
+            this.bunifuFlatButton11.IconVisible = true;
+            this.bunifuFlatButton11.IconZoom = 90D;
+            this.bunifuFlatButton11.IsTab = false;
+            this.bunifuFlatButton11.Location = new System.Drawing.Point(656, 51);
+            this.bunifuFlatButton11.Name = "bunifuFlatButton11";
+            this.bunifuFlatButton11.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(131)))), ((int)(((byte)(143)))));
+            this.bunifuFlatButton11.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.bunifuFlatButton11.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton11.selected = false;
+            this.bunifuFlatButton11.Size = new System.Drawing.Size(81, 32);
+            this.bunifuFlatButton11.TabIndex = 65;
+            this.bunifuFlatButton11.Text = "     Search ";
+            this.bunifuFlatButton11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButton11.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton11.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // UcForm1
             // 
@@ -1354,5 +1390,6 @@
         private ns1.BunifuFlatButton bunifuFlatButton9;
         private ns1.BunifuFlatButton bunifuFlatButton10;
         private ns1.BunifuMetroTextbox bunifuMetroTextbox1;
+        private ns1.BunifuFlatButton bunifuFlatButton11;
     }
 }
