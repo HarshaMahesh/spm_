@@ -18,8 +18,8 @@ namespace Intern_forms_management_system.UIForms
         UserControls.UCStudentRegisterHR stdReg;
         UserControls.DailyDiary form3;
         UserControls.SupervisorDailyDiary form32;
-
         UserControls.UCInernshipReport form33;
+        UserControls.ScheduleVivaIndustrialManager schedule;
         LoginIFMS logn;
         DbConnect db;
         public DashBoard()
@@ -32,6 +32,7 @@ namespace Intern_forms_management_system.UIForms
             form3 = new UserControls.DailyDiary();
             form32 = new UserControls.SupervisorDailyDiary();
             form33 = new UserControls.UCInernshipReport();
+            schedule = new UserControls.ScheduleVivaIndustrialManager();
             logn = new LoginIFMS();
         }
 
@@ -85,6 +86,7 @@ namespace Intern_forms_management_system.UIForms
             form33.Hide();
             panel2.Hide();
             form1.Hide();
+            schedule.Hide();
             stdReg.Show();
             stdReg.Dock = DockStyle.Fill;
             panel1.Controls.Add(stdReg);
@@ -163,6 +165,7 @@ namespace Intern_forms_management_system.UIForms
             form3.Hide();
             form1.Hide();
             form1.Hide();
+            schedule.Hide();
 
             panel2.Show();
         }
@@ -197,6 +200,7 @@ namespace Intern_forms_management_system.UIForms
             form32.Hide();
             stdReg.Hide();
             form3.Hide();
+            schedule.Hide();
             form1.Show();
             form1.Dock = DockStyle.Fill;
             panel1.Controls.Add(form1);
@@ -224,6 +228,7 @@ namespace Intern_forms_management_system.UIForms
             form32.Hide();
             form1.Hide();
             form3.Show();
+            schedule.Hide();
             form3.Dock = DockStyle.Fill;
             panel1.Controls.Add(form3);
         }
@@ -250,6 +255,7 @@ namespace Intern_forms_management_system.UIForms
             form1.Hide();
             form33.Hide();
             form3.Hide();
+            schedule.Hide();
             form32.Show();
             form32.Dock = DockStyle.Fill;
             panel1.Controls.Add(form32);
@@ -278,6 +284,7 @@ namespace Intern_forms_management_system.UIForms
             form1.Hide();
             form3.Hide();
             form32.Hide();
+            schedule.Hide();
             form33.Show();
             form33.Dock = DockStyle.Fill;
             panel1.Controls.Add(form33);
@@ -286,6 +293,30 @@ namespace Intern_forms_management_system.UIForms
 
         private void bunifuFlatButton1_Click_1(object sender, EventArgs e)
         {
+            if (SidePanal.Width == 277)
+
+            {
+                sidepanelbtn.Visible = true;
+                logo.Visible = false;
+                SidePanal.Width = 57;
+                // SidePanalAnimation.ShowSync(SidePanal);
+            }
+            else
+            {
+                sidepanelbtn.Visible = false;
+                logo.Visible = true;
+                SidePanal.Width = 277;
+            }
+
+            panel2.Hide();
+            stdReg.Hide();
+            form1.Hide();
+            form3.Hide();
+            form32.Hide();
+            form33.Hide();
+            schedule.Show();
+            schedule.Dock = DockStyle.Fill;
+            panel1.Controls.Add(schedule);
 
         }
 

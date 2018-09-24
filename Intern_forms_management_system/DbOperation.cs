@@ -16,7 +16,7 @@ namespace Intern_forms_management_system
         DbConnect db = new DbConnect();
         //form I-1 db oparation 
         
-        public void addStudentForm1(string id,double cgpa,int homephone,string semester,string year) {
+        public void addStudentForm1(string id,string cgpa,int homephone,string semester,string year) {
 
             try
             {
@@ -37,7 +37,7 @@ namespace Intern_forms_management_system
                 Console.Write(e);
             }
         }
-        public void updateStudentForm1(string id, double cgpa, int homephone, string semester, string year)
+        public void updateStudentForm1(string id, string cgpa, int homephone, string semester, string year)
         {
 
             try
@@ -60,13 +60,26 @@ namespace Intern_forms_management_system
                 Console.Write(e);
             }
         }
-        public void searchSudent(string id,string sname,string saddress,string sphone,string email) {
+        public void deleteStudentForm1(string id)
+        {
 
-          
+            try
+            {
+                db.Connection();
+                String upquery = "DELETE FROM intern_student WHERE studentId='" + id + "'";
+                MySqlCommand cmd = new MySqlCommand(upquery, db.con);
+                DataTable table = new DataTable();
+                db.con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
 
-
-
+                Console.Write(e);
+            }
         }
+
+       
         public void addEmployee(string name,string address,string sname, string title, string sphone, string semail, string esname) {
 
             db.Connection();
@@ -77,7 +90,29 @@ namespace Intern_forms_management_system
             db.con.Open();
             cmd1.ExecuteNonQuery();
 
-            String query2 = "INSERT INTO `supervisor`(`supervisorName`, `supervisorTitle`, `supervisorPhone`, `supervisorEmail`, `ExternalSupName`) VALUES (@f1,@f2,@f3,@f4,@f5)";
+            String query2 = "INSERT INTO `supervisor`(`supervisorName`, `supervisorTitle`, `supervisorPhone`, `supervisorEmail`, `ExternalSupName`,`ename`) VALUES (@f1,@f2,@f3,@f4,@f5,@f6)";
+            MySqlCommand cmd2 = new MySqlCommand(query2, db.con);
+            cmd2.Parameters.AddWithValue("@f1", sname);
+            cmd2.Parameters.AddWithValue("@f2", title);
+            cmd2.Parameters.AddWithValue("@f3", sphone);
+            cmd2.Parameters.AddWithValue("@f4", semail);
+            cmd2.Parameters.AddWithValue("@f5", esname);
+            cmd2.Parameters.AddWithValue("@f6", name);
+            cmd2.ExecuteNonQuery();
+            
+        }
+        public void updateEmployee(string name, string address, string sname, string title, string sphone, string semail, string esname)
+        {
+
+            db.Connection();
+            String query1 = "UPDATE `employee` SET address=@f1 WHERE name=@F1";
+            MySqlCommand cmd1 = new MySqlCommand(query1, db.con);
+            cmd1.Parameters.AddWithValue("@f1", name);
+            cmd1.Parameters.AddWithValue("@f2", address);
+            db.con.Open();
+            cmd1.ExecuteNonQuery();
+
+            String query2 = "UPDATE `employee`SET supervisorTitle=@f2, supervisorPhone=@f3, supervisorEmail=@F4,ExternalSupName=@f5 WHERE ExternalSupName=@F1"; 
             MySqlCommand cmd2 = new MySqlCommand(query2, db.con);
             cmd2.Parameters.AddWithValue("@f1", sname);
             cmd2.Parameters.AddWithValue("@f2", title);
@@ -85,8 +120,28 @@ namespace Intern_forms_management_system
             cmd2.Parameters.AddWithValue("@f4", semail);
             cmd2.Parameters.AddWithValue("@f5", esname);
             cmd2.ExecuteNonQuery();
-            
+
         }
+     /*   public void deleteEmployee(string id)
+        {
+
+            try
+            {
+                db.Connection();
+                String upquery = "DELETE FROM intern_student WHERE studentId='" + id + "'";
+                MySqlCommand cmd = new MySqlCommand(upquery, db.con);
+                DataTable table = new DataTable();
+                db.con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+
+                Console.Write(e);
+            }
+        }*/
+
+
         //Registering the employees - done by the HR Manager
         public void registerIntern(string studentid, string fullname, string university, string email, string telephone, string department, string address)
         {
@@ -106,6 +161,32 @@ namespace Intern_forms_management_system
             db.con.Open();
             cmd1.ExecuteNonQuery();
             
+        }
+        //Updating the employee Register - done by the HR Manager
+        public void updateInternByHR(string studentid, string fullname, string university, string email, string telephone, string department, string address)
+        {
+
+            try
+            {
+                db.Connection();
+                String upquery = "UPDATE intern_student SET fullname=@f2,university=@f3,address=@f4,email=@f5,telephone=@f6,department=@f7 WHERE studentId=@f1";
+                MySqlCommand cmd = new MySqlCommand(upquery, db.con);
+                DataTable table = new DataTable();
+                cmd.Parameters.AddWithValue("@f2", fullname);
+                cmd.Parameters.AddWithValue("@f3", university);
+                cmd.Parameters.AddWithValue("@f4", email);
+                cmd.Parameters.AddWithValue("@f5", telephone);
+                cmd.Parameters.AddWithValue("@f6", department);
+                cmd.Parameters.AddWithValue("@f7", address);
+
+                db.con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+
+                Console.Write(e);
+            }
         }
 
         //Validating the phone number of the Intern
@@ -193,10 +274,102 @@ namespace Intern_forms_management_system
                 return null;
             }
         }
+        //Schedule a Viva - Industrial Manager (INSERT)
+        public void scheduleViva(string studentid, string name, string university)
+        {
+            db.Connection();
+
+            String query1 = "INSERT INTO `vivaschedule`(`studentId`,`name`,`university`) values(@f1,@f2,@f3)";
+            MySqlCommand cmd1 = new MySqlCommand(query1, db.con);
+
+            cmd1.Parameters.AddWithValue("@f1", studentid);
+            cmd1.Parameters.AddWithValue("@f2", name);
+            cmd1.Parameters.AddWithValue("@f3", university);
+            //cmd1.Parameters.AddWithValue("@f4", date);
+            //cmd1.Parameters.AddWithValue("@f5", time);
+
+            db.con.Open();
+            cmd1.ExecuteNonQuery();
+        }
+
+        //Updating a Scheduled Viva - Industrial Manager (Update)
+
+        public void updateViva(string studentId, string fullname, string university)
+        {
+            try
+            {
+                db.Connection();
+                String upquery = "UPDATE vivaschedule SET fullname=@f2,university=@f3 WHERE studentId=@f1";
+                MySqlCommand cmd = new MySqlCommand(upquery, db.con);
+                DataTable table = new DataTable();
+                cmd.Parameters.AddWithValue("@f2", fullname);
+                cmd.Parameters.AddWithValue("@f3", university);
+
+
+                db.con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+
+                Console.Write(e);
+            }
+        }
+
+        //View Viva Schedule of interns
+        public DataTable viewVivaSchedule()
+        {
+            try
+            {
+
+                db.Connection();
+                db.con.Open();
+                DataTable ds = new DataTable();
+                String query = "SELECT * FROM `vivaschedule`";
+                MySqlCommand cmd = new MySqlCommand(query, db.con);
+                MySqlDataAdapter mda = new MySqlDataAdapter(query, db.con);
+                mda.Fill(ds);
+
+
+                return ds;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return null;
+            }
+        }
+
+        //LOAD DATA Registered interns (By the HR Manager)
+
+        public DataTable viewInternsByHR()
+        {
+            try
+            {
+
+                db.Connection();
+                db.con.Open();
+                DataTable ds = new DataTable();
+                String query = "SELECT * FROM `intern_student`";
+                MySqlCommand cmd = new MySqlCommand(query, db.con);
+                MySqlDataAdapter mda = new MySqlDataAdapter(query, db.con);
+                mda.Fill(ds);
+
+
+                return ds;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return null;
+            }
+        }
+
     }
-
-
 }
+
+
+
 
     
 

@@ -79,6 +79,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="sendMail.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="UIForms\DashBoard.cs">
       <SubType>Form</SubType>
@@ -103,6 +104,12 @@
       <DependentUpon>DailyDiary.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\DiaryEntry.cs" />
+    <Compile Include="UserControls\ScheduleVivaIndustrialManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ScheduleVivaIndustrialManager.designer.cs">
+      <DependentUpon>ScheduleVivaIndustrialManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\SupervisorDailyDiary.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -143,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DailyDiary.resx">
       <DependentUpon>DailyDiary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ScheduleVivaIndustrialManager.resx">
+      <DependentUpon>ScheduleVivaIndustrialManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\SupervisorDailyDiary.resx">
       <DependentUpon>SupervisorDailyDiary.cs</DependentUpon>

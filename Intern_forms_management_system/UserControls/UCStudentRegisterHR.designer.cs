@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCStudentRegisterHR));
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.StudentIDTextBox = new ns1.BunifuMaterialTextbox();
+            this.HeadLabel = new ns1.BunifuCustomLabel();
             this.bunifuCustomDataGrid1 = new ns1.BunifuCustomDataGrid();
             this.bunifuDatepicker1 = new ns1.BunifuDatepicker();
             this.ClearEmployee = new ns1.BunifuFlatButton();
@@ -56,8 +58,6 @@
             this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.HeadLabel = new ns1.BunifuCustomLabel();
-            this.StudentIDTextBox = new ns1.BunifuMaterialTextbox();
             this.bunifuCards1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
@@ -102,30 +102,61 @@
             this.bunifuCards1.TabIndex = 11;
             this.bunifuCards1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards1_Paint);
             // 
+            // StudentIDTextBox
+            // 
+            this.StudentIDTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.StudentIDTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.StudentIDTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.StudentIDTextBox.HintForeColor = System.Drawing.Color.Empty;
+            this.StudentIDTextBox.HintText = "";
+            this.StudentIDTextBox.isPassword = false;
+            this.StudentIDTextBox.LineFocusedColor = System.Drawing.Color.Blue;
+            this.StudentIDTextBox.LineIdleColor = System.Drawing.Color.White;
+            this.StudentIDTextBox.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.StudentIDTextBox.LineThickness = 3;
+            this.StudentIDTextBox.Location = new System.Drawing.Point(102, 57);
+            this.StudentIDTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.StudentIDTextBox.Name = "StudentIDTextBox";
+            this.StudentIDTextBox.Size = new System.Drawing.Size(327, 44);
+            this.StudentIDTextBox.TabIndex = 24;
+            this.StudentIDTextBox.Text = "Enter Student ID Here ...";
+            this.StudentIDTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.StudentIDTextBox.Enter += new System.EventHandler(this.StudentIDTextBox_Enter);
+            // 
+            // HeadLabel
+            // 
+            this.HeadLabel.AutoSize = true;
+            this.HeadLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            this.HeadLabel.Location = new System.Drawing.Point(17, 75);
+            this.HeadLabel.Name = "HeadLabel";
+            this.HeadLabel.Size = new System.Drawing.Size(78, 16);
+            this.HeadLabel.TabIndex = 23;
+            this.HeadLabel.Text = "Student ID : ";
+            // 
             // bunifuCustomDataGrid1
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.bunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.bunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.bunifuCustomDataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bunifuCustomDataGrid1.DoubleBuffered = true;
             this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
             this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.SeaGreen;
             this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(516, 114);
+            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(491, 95);
             this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
             this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(319, 308);
+            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(555, 342);
             this.bunifuCustomDataGrid1.TabIndex = 22;
             // 
             // bunifuDatepicker1
@@ -581,37 +612,6 @@
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 10;
             // 
-            // HeadLabel
-            // 
-            this.HeadLabel.AutoSize = true;
-            this.HeadLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.HeadLabel.Location = new System.Drawing.Point(17, 75);
-            this.HeadLabel.Name = "HeadLabel";
-            this.HeadLabel.Size = new System.Drawing.Size(78, 16);
-            this.HeadLabel.TabIndex = 23;
-            this.HeadLabel.Text = "Student ID : ";
-            // 
-            // StudentIDTextBox
-            // 
-            this.StudentIDTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.StudentIDTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.StudentIDTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.StudentIDTextBox.HintForeColor = System.Drawing.Color.Empty;
-            this.StudentIDTextBox.HintText = "";
-            this.StudentIDTextBox.isPassword = false;
-            this.StudentIDTextBox.LineFocusedColor = System.Drawing.Color.Blue;
-            this.StudentIDTextBox.LineIdleColor = System.Drawing.Color.White;
-            this.StudentIDTextBox.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.StudentIDTextBox.LineThickness = 3;
-            this.StudentIDTextBox.Location = new System.Drawing.Point(102, 57);
-            this.StudentIDTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.StudentIDTextBox.Name = "StudentIDTextBox";
-            this.StudentIDTextBox.Size = new System.Drawing.Size(327, 44);
-            this.StudentIDTextBox.TabIndex = 24;
-            this.StudentIDTextBox.Text = "Enter Student ID Here ...";
-            this.StudentIDTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.StudentIDTextBox.Enter += new System.EventHandler(this.StudentIDTextBox_Enter);
-            // 
             // UCStudentRegisterHR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -621,6 +621,7 @@
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Name = "UCStudentRegisterHR";
             this.Size = new System.Drawing.Size(1133, 653);
+            this.Load += new System.EventHandler(this.UCStudentRegisterHR_Load);
             this.bunifuCards1.ResumeLayout(false);
             this.bunifuCards1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();

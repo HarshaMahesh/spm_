@@ -136,5 +136,23 @@ namespace Intern_forms_management_system.UserControls
         {
             StudentIDTextBox.Text = "";
         }
+
+        private void UCStudentRegisterHR_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                DbOperation dbops = new DbOperation();
+                DataTable dataTabl1 = new DataTable();
+                dataTabl1 = dbops.viewInternsByHR();
+                //ds = dbops.viewDailyDiary(cmbStdID.SelectedItem.ToString(), dateTimeFrom.Value, dateTimeTo.Value);
+
+                bunifuCustomDataGrid1.DataSource = dataTabl1;
+
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show(E.Message);
+            }
+        }
     }
 }

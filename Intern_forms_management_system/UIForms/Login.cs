@@ -12,7 +12,7 @@ namespace Intern_forms_management_system.UIForms
     class Login
     {
         //decalre properties 
-        private string Username { get; set; }
+        private  string Username { get; set; }
         private string Userpassword { get; set; }
 
         private DbConnect connection;
