@@ -91,6 +91,7 @@ namespace Intern_forms_management_system.UIForms
             this.btnClose.TabIndex = 9;
             this.btnClose.TabStop = false;
             this.btnClose.Zoom = 10;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txtUsername
             // 
@@ -163,9 +164,7 @@ namespace Intern_forms_management_system.UIForms
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginIFMS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-
             this.Load += new System.EventHandler(this.LoginIFMS_Load);
-
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -190,5 +189,9 @@ namespace Intern_forms_management_system.UIForms
 
         }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

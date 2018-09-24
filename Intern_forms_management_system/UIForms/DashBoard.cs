@@ -20,6 +20,7 @@ namespace Intern_forms_management_system.UIForms
         UserControls.SupervisorDailyDiary form32;
 
         UserControls.UCInernshipReport form33;
+        LoginIFMS logn;
         DbConnect db;
         public DashBoard()
         {
@@ -31,6 +32,7 @@ namespace Intern_forms_management_system.UIForms
             form3 = new UserControls.DailyDiary();
             form32 = new UserControls.SupervisorDailyDiary();
             form33 = new UserControls.UCInernshipReport();
+            logn = new LoginIFMS();
         }
 
         private void DashBoard_Load(object sender, EventArgs e)
@@ -280,6 +282,17 @@ namespace Intern_forms_management_system.UIForms
             form33.Dock = DockStyle.Fill;
             panel1.Controls.Add(form33);
 
+        }
+
+        private void bunifuFlatButton1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuFlatButton7_Click(object sender, EventArgs e)
+        {
+            logn.Visible = true;
+            this.Visible = false;
         }
     }
 }
