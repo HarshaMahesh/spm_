@@ -185,18 +185,10 @@ namespace Intern_forms_management_system.UIForms
                 this.Visible = false;
             }
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> b70ed2005773cc744b7adfb87a4a34705b72878f
 
         private void LoginIFMS_Load(object sender, EventArgs e)
         {
 
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> b70ed2005773cc744b7adfb87a4a34705b72878f
-    }
+  }
 }

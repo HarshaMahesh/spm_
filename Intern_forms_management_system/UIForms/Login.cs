@@ -12,8 +12,8 @@ namespace Intern_forms_management_system.UIForms
     class Login
     {
         //decalre properties 
-        private string Username { get; set; }
-        private string Userpassword { get; set; }
+        public static string Username { get; set; }
+        public static string Userpassword { get; set; }
 
         private DbConnect connection;
 
@@ -24,27 +24,6 @@ namespace Intern_forms_management_system.UIForms
             
         }
 
-        //setters
-        public void setUsername(string uname)
-        {
-            this.Username = uname;
-        }
-
-        public void setPassword(string pwd)
-        {
-            this.Userpassword = pwd;
-        }
-
-        //getters
-        public string getPassword()
-        {
-            return this.Userpassword;
-        }
-
-        public string getUsername()
-        {
-            return this.Username;
-        }
         //validate string 
         private bool StringValidator(string input)
         {
@@ -87,6 +66,15 @@ namespace Intern_forms_management_system.UIForms
                 return false;
 
             }
+
+            //check passsword empty 
+            if (string.IsNullOrEmpty(pass))
+            {
+                MessageBox.Show("Enter the password!");
+                return false;
+
+            }
+
             //check user name is valid type 
             else if (StringValidator(user) == true)
             {
@@ -101,20 +89,19 @@ namespace Intern_forms_management_system.UIForms
                 connection.con.Open();
                 String query1 = "select * from users where uname='"+user+"'";
                 MySqlCommand cmd = new MySqlCommand(query1, connection.con);
-                //cmd.Parameters.AddWithValue("@param1", getUsername());
                 cmd.Connection = connection.con;
                
 
                 MySqlDataReader reader = cmd.ExecuteReader();
 
                 //while (reader.Read())
-                 if (!reader.Read())
+                 if (!reader.HasRows)
                 {
                     MessageBox.Show("User name is incorrect!");
                     ClearTexts(user, pass);
                     return false;
                 }
-                //check password is empty 
+                
                 else
                 {
                     connection.Connection();
@@ -124,14 +111,13 @@ namespace Intern_forms_management_system.UIForms
                     cmd2.Parameters.AddWithValue("@param1", user);
                     cmd2.Parameters.AddWithValue("@param2", pass);
                     cmd2.Connection = connection.con;
-                    //MessageBox.Show(getUsername());
-                    //MessageBox.Show(getUsername());
+                    
 
 
                     MySqlDataReader reader2 = cmd2.ExecuteReader();
 
 
-                    //check password is correct 
+                    
                     
                     if (!reader2.Read())
                     {
