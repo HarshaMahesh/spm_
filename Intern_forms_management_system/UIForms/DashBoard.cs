@@ -287,5 +287,34 @@ namespace Intern_forms_management_system.UIForms
 
         }
 
+        private void bunifuFlatButton3_Click_1(object sender, EventArgs e)
+        {
+            if (SidePanal.Width == 277)
+
+            {
+                sidepanelbtn.Visible = true;
+                logo.Visible = false;
+                SidePanal.Width = 57;
+                // SidePanalAnimation.ShowSync(SidePanal);
+            }
+            else
+            {
+                sidepanelbtn.Visible = false;
+                logo.Visible = true;
+                SidePanal.Width = 277;
+            }
+
+            panel2.Hide();
+            stdReg.Hide();
+            form1.Hide();
+            form33.Hide();
+            form32.Hide();
+            form3.Show();
+            form3.Dock = DockStyle.Fill;
+            panel1.Controls.Add(form3);
+
+
+
+        }
     }
 }

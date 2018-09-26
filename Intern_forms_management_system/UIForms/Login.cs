@@ -13,7 +13,7 @@ namespace Intern_forms_management_system.UIForms
     {
         //decalre properties 
         public static string Username { get; set; }
-        public static string Userpassword { get; set; }
+        private string Userpassword { get; set; }
 
         private DbConnect connection;
 

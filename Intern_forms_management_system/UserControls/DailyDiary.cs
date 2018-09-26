@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Intern_forms_management_system.Diary;
+using Intern_forms_management_system.UIForms;
 
 namespace Intern_forms_management_system.UserControls
 {
@@ -37,13 +38,19 @@ namespace Intern_forms_management_system.UserControls
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
+            entry.setEntry(txtEntry.Text);
+            entry.setSid(txtUsername.Text);
             //Button for inserting an diary entry to Database
-            if (entry.saveEntry())
+            if (entry.entryValidate())
             {
+                //DiaryEntry diaryEntry = new DiaryEntry();
+
+                entry.saveEntry();
                 MessageBox.Show("Diary Entry Success");
 
             }
-            else {
+            else
+            {
                 MessageBox.Show("Diary Entry Unsuccess");
             }
         }

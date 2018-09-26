@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Intern_forms_management_system.Diary
 {
@@ -60,24 +61,53 @@ namespace Intern_forms_management_system.Diary
             this.Entry = entry;
         }
 
+
+        public void setSid(string sid)
+        {
+            this.sid = sid;
+        }
+
+        public string getSid()
+        {
+            return this.sid;
+        }
+
         public bool saveEntry()
         {
-            if (string.IsNullOrEmpty(getEntry()))
-            {
-                return false;
-            }
-            else
+            if(entryValidate())
             {
                 connection.Connection();
                 String query1 = "INSERT INTO `daily_diary`(`ddate`, `studentId`, `task`) VALUES (@f1,@f2,@f3)";
                 MySqlCommand cmd1 = new MySqlCommand(query1, connection.con);
                 cmd1.Parameters.AddWithValue("@f1", getEntryDate());
-                cmd1.Parameters.AddWithValue("@f2", "IT1234567");
-                cmd1.Parameters.AddWithValue("@f2", getEntry());
+                cmd1.Parameters.AddWithValue("@f2", getSid());
+                cmd1.Parameters.AddWithValue("@f3", getEntry());
                 
                 connection.con.Open();
                 cmd1.ExecuteNonQuery();
 
+                return true;
+            }
+
+            return false;
+        }
+
+        public bool entryValidate()
+        {
+            if (string.IsNullOrEmpty(getEntry()))
+            {
+                MessageBox.Show("Diary Entry is Empty");
+
+                return false;
+            }
+
+            else if (string.IsNullOrEmpty(getSid()))
+            {
+                MessageBox.Show("Diary Student ID is Empty");
+                return false;
+            }
+            else
+            {
                 return true;
             }
         }

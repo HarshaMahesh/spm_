@@ -179,7 +179,7 @@ namespace Intern_forms_management_system.UIForms
             Login login = new Login();           
             if (login.IsLoggedIn(txtUsername.Text, txtPassword.Text))
             {
-                
+                Login.Username= txtUsername.Text;
                 DashBoard ds = new DashBoard();
                 ds.Visible = true;
                 this.Visible = false;

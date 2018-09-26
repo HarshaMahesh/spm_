@@ -31,24 +31,26 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DailyDiary));
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtEntry = new System.Windows.Forms.RichTextBox();
+            this.dateTimePickerDate = new System.Windows.Forms.DateTimePicker();
             this.ClearEmployee = new ns1.BunifuFlatButton();
             this.UpdateEmployee = new ns1.BunifuFlatButton();
             this.bunifuFlatButton3 = new ns1.BunifuFlatButton();
             this.bunifuFlatButton2 = new ns1.BunifuFlatButton();
             this.btnSave = new ns1.BunifuFlatButton();
-            this.bunifuCustomLabel5 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel3 = new ns1.BunifuCustomLabel();
             this.RegisterEmployeeForm = new ns1.BunifuCustomLabel();
             this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.txtUsername = new ns1.BunifuMaterialTextbox();
+            this.bunifuCustomLabel1 = new ns1.BunifuCustomLabel();
+            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCards1.SuspendLayout();
             this.bunifuCards2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            this.bunifuGradientPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuCards1
@@ -57,23 +59,23 @@
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.Tomato;
+            this.bunifuCards1.Controls.Add(this.bunifuCustomLabel2);
+            this.bunifuCards1.Controls.Add(this.bunifuCustomLabel1);
+            this.bunifuCards1.Controls.Add(this.txtUsername);
+            this.bunifuCards1.Controls.Add(this.bunifuGradientPanel2);
             this.bunifuCards1.Controls.Add(this.bunifuCards2);
-            this.bunifuCards1.Controls.Add(this.monthCalendar1);
-            this.bunifuCards1.Controls.Add(this.dateTimePicker1);
+            this.bunifuCards1.Controls.Add(this.dateTimePickerDate);
             this.bunifuCards1.Controls.Add(this.ClearEmployee);
             this.bunifuCards1.Controls.Add(this.UpdateEmployee);
             this.bunifuCards1.Controls.Add(this.bunifuFlatButton3);
             this.bunifuCards1.Controls.Add(this.bunifuFlatButton2);
             this.bunifuCards1.Controls.Add(this.btnSave);
-            this.bunifuCards1.Controls.Add(this.bunifuCustomLabel5);
-            this.bunifuCards1.Controls.Add(this.bunifuCustomLabel3);
-            this.bunifuCards1.Controls.Add(this.RegisterEmployeeForm);
             this.bunifuCards1.LeftSahddow = false;
             this.bunifuCards1.Location = new System.Drawing.Point(59, 79);
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(1068, 571);
+            this.bunifuCards1.Size = new System.Drawing.Size(1074, 571);
             this.bunifuCards1.TabIndex = 11;
             this.bunifuCards1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards1_Paint);
             // 
@@ -83,35 +85,29 @@
             this.bunifuCards2.BorderRadius = 5;
             this.bunifuCards2.BottomSahddow = true;
             this.bunifuCards2.color = System.Drawing.Color.Tomato;
-            this.bunifuCards2.Controls.Add(this.richTextBox1);
+            this.bunifuCards2.Controls.Add(this.txtEntry);
             this.bunifuCards2.LeftSahddow = false;
-            this.bunifuCards2.Location = new System.Drawing.Point(441, 32);
+            this.bunifuCards2.Location = new System.Drawing.Point(585, 125);
             this.bunifuCards2.Name = "bunifuCards2";
             this.bunifuCards2.RightSahddow = true;
             this.bunifuCards2.ShadowDepth = 20;
-            this.bunifuCards2.Size = new System.Drawing.Size(605, 397);
+            this.bunifuCards2.Size = new System.Drawing.Size(461, 304);
             this.bunifuCards2.TabIndex = 24;
             // 
-            // richTextBox1
+            // txtEntry
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(22, 30);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(565, 347);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            this.txtEntry.Location = new System.Drawing.Point(23, 29);
+            this.txtEntry.Name = "txtEntry";
+            this.txtEntry.Size = new System.Drawing.Size(421, 254);
+            this.txtEntry.TabIndex = 1;
+            this.txtEntry.Text = "";
             // 
-            // monthCalendar1
+            // dateTimePickerDate
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(141, 118);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 23;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(141, 326);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 22;
+            this.dateTimePickerDate.Location = new System.Drawing.Point(162, 328);
+            this.dateTimePickerDate.Name = "dateTimePickerDate";
+            this.dateTimePickerDate.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerDate.TabIndex = 22;
             // 
             // ClearEmployee
             // 
@@ -292,32 +288,12 @@
             this.btnSave.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
-            // bunifuCustomLabel5
-            // 
-            this.bunifuCustomLabel5.AutoSize = true;
-            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(17, 330);
-            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(89, 15);
-            this.bunifuCustomLabel5.TabIndex = 5;
-            this.bunifuCustomLabel5.Text = "Pick Entry Date";
-            // 
-            // bunifuCustomLabel3
-            // 
-            this.bunifuCustomLabel3.AutoSize = true;
-            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(17, 118);
-            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(33, 15);
-            this.bunifuCustomLabel3.TabIndex = 3;
-            this.bunifuCustomLabel3.Text = "Date";
-            // 
             // RegisterEmployeeForm
             // 
             this.RegisterEmployeeForm.AutoSize = true;
             this.RegisterEmployeeForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisterEmployeeForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.RegisterEmployeeForm.Location = new System.Drawing.Point(14, 12);
+            this.RegisterEmployeeForm.Location = new System.Drawing.Point(13, 35);
             this.RegisterEmployeeForm.Name = "RegisterEmployeeForm";
             this.RegisterEmployeeForm.Size = new System.Drawing.Size(146, 31);
             this.RegisterEmployeeForm.TabIndex = 1;
@@ -331,10 +307,10 @@
             this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.bunifuGradientPanel3.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.bunifuGradientPanel3.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
-            this.bunifuGradientPanel3.Location = new System.Drawing.Point(6, 3);
+            this.bunifuGradientPanel3.Location = new System.Drawing.Point(0, 3);
             this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
             this.bunifuGradientPanel3.Quality = 10;
-            this.bunifuGradientPanel3.Size = new System.Drawing.Size(262, 640);
+            this.bunifuGradientPanel3.Size = new System.Drawing.Size(268, 640);
             this.bunifuGradientPanel3.TabIndex = 9;
             // 
             // bunifuGradientPanel1
@@ -349,7 +325,7 @@
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 3);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1132, 70);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1132, 85);
             this.bunifuGradientPanel1.TabIndex = 10;
             // 
             // bunifuImageButton1
@@ -365,6 +341,59 @@
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 10;
             // 
+            // bunifuGradientPanel2
+            // 
+            this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
+            this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel2.Controls.Add(this.RegisterEmployeeForm);
+            this.bunifuGradientPanel2.GradientBottomLeft = System.Drawing.Color.White;
+            this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.White;
+            this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel2.Location = new System.Drawing.Point(20, 15);
+            this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
+            this.bunifuGradientPanel2.Quality = 10;
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(200, 100);
+            this.bunifuGradientPanel2.TabIndex = 25;
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtUsername.HintForeColor = System.Drawing.Color.Empty;
+            this.txtUsername.HintText = "";
+            this.txtUsername.isPassword = false;
+            this.txtUsername.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txtUsername.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtUsername.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txtUsername.LineThickness = 3;
+            this.txtUsername.Location = new System.Drawing.Point(162, 170);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(289, 44);
+            this.txtUsername.TabIndex = 27;
+            this.txtUsername.Text = "Student Number";
+            this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(19, 196);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(84, 13);
+            this.bunifuCustomLabel1.TabIndex = 28;
+            this.bunifuCustomLabel1.Text = "Student Number";
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(19, 328);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(54, 13);
+            this.bunifuCustomLabel2.TabIndex = 29;
+            this.bunifuCustomLabel2.Text = "Pick Date";
+            // 
             // DailyDiary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,6 +408,8 @@
             this.bunifuCards2.ResumeLayout(false);
             this.bunifuGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            this.bunifuGradientPanel2.ResumeLayout(false);
+            this.bunifuGradientPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -386,8 +417,6 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
-        private ns1.BunifuCustomLabel bunifuCustomLabel5;
-        private ns1.BunifuCustomLabel bunifuCustomLabel3;
         private ns1.BunifuCustomLabel RegisterEmployeeForm;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel3;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
@@ -398,8 +427,11 @@
         private ns1.BunifuFlatButton ClearEmployee;
         private ns1.BunifuFlatButton UpdateEmployee;
         private Bunifu.Framework.UI.BunifuCards bunifuCards2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.RichTextBox txtEntry;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDate;
+        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel2;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
+        private ns1.BunifuCustomLabel bunifuCustomLabel1;
+        private ns1.BunifuMaterialTextbox txtUsername;
     }
 }

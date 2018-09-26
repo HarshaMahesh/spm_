@@ -1,7 +1,9 @@
 
 ﻿using Intern_forms_management_system;
+//using Intern_forms_management_system.UserControls.DailyDiary;
 //using Intern_forms_management_system.Login;
 using Intern_forms_management_system.UIForms;
+using Intern_forms_management_system.UserControls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +25,7 @@ namespace Intern_forms_management_system
 
             
 
-            Application.Run(new SplashScreen());
+            Application.Run(new LoginIFMS());
 
         }
     }
