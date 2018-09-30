@@ -34,22 +34,19 @@
             this.txtEntry = new System.Windows.Forms.RichTextBox();
             this.dateTimePickerDate = new System.Windows.Forms.DateTimePicker();
             this.ClearEmployee = new ns1.BunifuFlatButton();
-            this.UpdateEmployee = new ns1.BunifuFlatButton();
+            this.btnSearch = new ns1.BunifuFlatButton();
             this.bunifuFlatButton3 = new ns1.BunifuFlatButton();
             this.bunifuFlatButton2 = new ns1.BunifuFlatButton();
             this.btnSave = new ns1.BunifuFlatButton();
             this.RegisterEmployeeForm = new ns1.BunifuCustomLabel();
             this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.txtUsername = new ns1.BunifuMaterialTextbox();
             this.bunifuCustomLabel1 = new ns1.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCards1.SuspendLayout();
             this.bunifuCards2.SuspendLayout();
-            this.bunifuGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.bunifuGradientPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,7 +63,7 @@
             this.bunifuCards1.Controls.Add(this.bunifuCards2);
             this.bunifuCards1.Controls.Add(this.dateTimePickerDate);
             this.bunifuCards1.Controls.Add(this.ClearEmployee);
-            this.bunifuCards1.Controls.Add(this.UpdateEmployee);
+            this.bunifuCards1.Controls.Add(this.btnSearch);
             this.bunifuCards1.Controls.Add(this.bunifuFlatButton3);
             this.bunifuCards1.Controls.Add(this.bunifuFlatButton2);
             this.bunifuCards1.Controls.Add(this.btnSave);
@@ -104,7 +101,7 @@
             // 
             // dateTimePickerDate
             // 
-            this.dateTimePickerDate.Location = new System.Drawing.Point(162, 328);
+            this.dateTimePickerDate.Location = new System.Drawing.Point(162, 269);
             this.dateTimePickerDate.Name = "dateTimePickerDate";
             this.dateTimePickerDate.Size = new System.Drawing.Size(200, 20);
             this.dateTimePickerDate.TabIndex = 22;
@@ -131,7 +128,7 @@
             this.ClearEmployee.IconVisible = true;
             this.ClearEmployee.IconZoom = 90D;
             this.ClearEmployee.IsTab = false;
-            this.ClearEmployee.Location = new System.Drawing.Point(555, 460);
+            this.ClearEmployee.Location = new System.Drawing.Point(568, 496);
             this.ClearEmployee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ClearEmployee.Name = "ClearEmployee";
             this.ClearEmployee.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -144,42 +141,43 @@
             this.ClearEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ClearEmployee.Textcolor = System.Drawing.Color.White;
             this.ClearEmployee.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClearEmployee.Click += new System.EventHandler(this.ClearEmployee_Click);
             // 
-            // UpdateEmployee
+            // btnSearch
             // 
-            this.UpdateEmployee.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.UpdateEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.UpdateEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.UpdateEmployee.BorderRadius = 0;
-            this.UpdateEmployee.ButtonText = "Cancel";
-            this.UpdateEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.UpdateEmployee.DisabledColor = System.Drawing.Color.Gray;
-            this.UpdateEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateEmployee.Iconcolor = System.Drawing.Color.Transparent;
-            this.UpdateEmployee.Iconimage = ((System.Drawing.Image)(resources.GetObject("UpdateEmployee.Iconimage")));
-            this.UpdateEmployee.Iconimage_right = null;
-            this.UpdateEmployee.Iconimage_right_Selected = null;
-            this.UpdateEmployee.Iconimage_Selected = null;
-            this.UpdateEmployee.IconMarginLeft = 0;
-            this.UpdateEmployee.IconMarginRight = 0;
-            this.UpdateEmployee.IconRightVisible = true;
-            this.UpdateEmployee.IconRightZoom = 0D;
-            this.UpdateEmployee.IconVisible = true;
-            this.UpdateEmployee.IconZoom = 90D;
-            this.UpdateEmployee.IsTab = false;
-            this.UpdateEmployee.Location = new System.Drawing.Point(342, 460);
-            this.UpdateEmployee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.UpdateEmployee.Name = "UpdateEmployee";
-            this.UpdateEmployee.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.UpdateEmployee.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.UpdateEmployee.OnHoverTextColor = System.Drawing.Color.White;
-            this.UpdateEmployee.selected = false;
-            this.UpdateEmployee.Size = new System.Drawing.Size(158, 48);
-            this.UpdateEmployee.TabIndex = 19;
-            this.UpdateEmployee.Text = "Cancel";
-            this.UpdateEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.UpdateEmployee.Textcolor = System.Drawing.Color.White;
-            this.UpdateEmployee.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearch.BorderRadius = 0;
+            this.btnSearch.ButtonText = "Search Entry";
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.DisabledColor = System.Drawing.Color.Gray;
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnSearch.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnSearch.Iconimage")));
+            this.btnSearch.Iconimage_right = null;
+            this.btnSearch.Iconimage_right_Selected = null;
+            this.btnSearch.Iconimage_Selected = null;
+            this.btnSearch.IconMarginLeft = 0;
+            this.btnSearch.IconMarginRight = 0;
+            this.btnSearch.IconRightVisible = true;
+            this.btnSearch.IconRightZoom = 0D;
+            this.btnSearch.IconVisible = true;
+            this.btnSearch.IconZoom = 90D;
+            this.btnSearch.IsTab = false;
+            this.btnSearch.Location = new System.Drawing.Point(162, 340);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnSearch.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnSearch.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnSearch.selected = false;
+            this.btnSearch.Size = new System.Drawing.Size(158, 48);
+            this.btnSearch.TabIndex = 19;
+            this.btnSearch.Text = "Search Entry";
+            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.Textcolor = System.Drawing.Color.White;
+            this.btnSearch.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // bunifuFlatButton3
             // 
@@ -273,7 +271,7 @@
             this.btnSave.IconVisible = true;
             this.btnSave.IconZoom = 90D;
             this.btnSave.IsTab = false;
-            this.btnSave.Location = new System.Drawing.Point(117, 460);
+            this.btnSave.Location = new System.Drawing.Point(326, 496);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -293,7 +291,7 @@
             this.RegisterEmployeeForm.AutoSize = true;
             this.RegisterEmployeeForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisterEmployeeForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.RegisterEmployeeForm.Location = new System.Drawing.Point(13, 35);
+            this.RegisterEmployeeForm.Location = new System.Drawing.Point(11, 7);
             this.RegisterEmployeeForm.Name = "RegisterEmployeeForm";
             this.RegisterEmployeeForm.Size = new System.Drawing.Size(146, 31);
             this.RegisterEmployeeForm.TabIndex = 1;
@@ -317,7 +315,6 @@
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuImageButton1);
             this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(50)))), ((int)(((byte)(56)))));
@@ -328,21 +325,9 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1132, 85);
             this.bunifuGradientPanel1.TabIndex = 10;
             // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(1062, 20);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(43, 35);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 1;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
-            // 
             // bunifuGradientPanel2
             // 
+            this.bunifuGradientPanel2.BackColor = System.Drawing.Color.Olive;
             this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
             this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel2.Controls.Add(this.RegisterEmployeeForm);
@@ -350,10 +335,10 @@
             this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.White;
             this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel2.Location = new System.Drawing.Point(20, 15);
+            this.bunifuGradientPanel2.Location = new System.Drawing.Point(22, 50);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(200, 100);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(160, 38);
             this.bunifuGradientPanel2.TabIndex = 25;
             // 
             // txtUsername
@@ -373,7 +358,6 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(289, 44);
             this.txtUsername.TabIndex = 27;
-            this.txtUsername.Text = "Student Number";
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel1
@@ -388,7 +372,7 @@
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(19, 328);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(19, 276);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(54, 13);
             this.bunifuCustomLabel2.TabIndex = 29;
@@ -406,8 +390,6 @@
             this.bunifuCards1.ResumeLayout(false);
             this.bunifuCards1.PerformLayout();
             this.bunifuCards2.ResumeLayout(false);
-            this.bunifuGradientPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.bunifuGradientPanel2.PerformLayout();
             this.ResumeLayout(false);
@@ -420,12 +402,11 @@
         private ns1.BunifuCustomLabel RegisterEmployeeForm;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel3;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private ns1.BunifuFlatButton btnSave;
         private ns1.BunifuFlatButton bunifuFlatButton3;
         private ns1.BunifuFlatButton bunifuFlatButton2;
         private ns1.BunifuFlatButton ClearEmployee;
-        private ns1.BunifuFlatButton UpdateEmployee;
+        private ns1.BunifuFlatButton btnSearch;
         private Bunifu.Framework.UI.BunifuCards bunifuCards2;
         private System.Windows.Forms.RichTextBox txtEntry;
         private System.Windows.Forms.DateTimePicker dateTimePickerDate;

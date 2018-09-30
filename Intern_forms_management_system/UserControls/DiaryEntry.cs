@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework;
 
 namespace Intern_forms_management_system.Diary
 {
@@ -98,6 +99,7 @@ namespace Intern_forms_management_system.Diary
             {
                 MessageBox.Show("Diary Entry is Empty");
 
+
                 return false;
             }
 
@@ -106,10 +108,28 @@ namespace Intern_forms_management_system.Diary
                 MessageBox.Show("Diary Student ID is Empty");
                 return false;
             }
+            else if(getEntryDate()==null)
+            {
+                MessageBox.Show("Diary Entry Date is Empty");
+                return false;
+            }
+
             else
             {
                 return true;
             }
+        }
+
+        public void loadEntry()
+        {
+           // connection.Connection();
+           // MySqlCommand cmd2;
+           // MySqlDataReader mdr;
+
+           //// String quary = "SELECT * FROM `intern_student` where studentId='" + Sidtxtbox.Text + "'";
+           // cmd2 = new MySqlCommand(quary, connection.con);
+           // connection.con.Open();
+           // mdr = cmd2.ExecuteReader();
         }
 
 

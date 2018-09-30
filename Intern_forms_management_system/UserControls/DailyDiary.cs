@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Intern_forms_management_system.Diary;
 using Intern_forms_management_system.UIForms;
+using MetroFramework;
 
 namespace Intern_forms_management_system.UserControls
 {
@@ -38,20 +39,26 @@ namespace Intern_forms_management_system.UserControls
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
+
             entry.setEntry(txtEntry.Text);
             entry.setSid(txtUsername.Text);
+            entry.setDate(dateTimePickerDate.Value);
             //Button for inserting an diary entry to Database
             if (entry.entryValidate())
             {
+
+                
                 //DiaryEntry diaryEntry = new DiaryEntry();
 
                 entry.saveEntry();
-                MessageBox.Show("Diary Entry Success");
+                MessageBox.Show("Diary Entry Success", "Info", MessageBoxButtons.OK);
+                //MetroMessageBox.Show(this,"Diary Entry Success","",MessageBoxButtons.OK);
 
             }
             else
             {
-                MessageBox.Show("Diary Entry Unsuccess");
+                MessageBox.Show("Diary Entry UnSuccess", "Error", MessageBoxButtons.OK);
+                //MetroMessageBox.Show(this, "Diary Entry UnSuccess", "", MessageBoxButtons.OK);
             }
         }
 
@@ -63,6 +70,12 @@ namespace Intern_forms_management_system.UserControls
         private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ClearEmployee_Click(object sender, EventArgs e)
+        {
+            txtEntry.Text = "";
+            txtUsername.Text = "";
         }
     }
 }
