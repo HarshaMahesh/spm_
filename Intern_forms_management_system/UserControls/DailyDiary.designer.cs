@@ -33,7 +33,7 @@
             this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
             this.txtEntry = new System.Windows.Forms.RichTextBox();
             this.dateTimePickerDate = new System.Windows.Forms.DateTimePicker();
-            this.ClearEmployee = new ns1.BunifuFlatButton();
+            this.btnUpdateEntry = new ns1.BunifuFlatButton();
             this.btnSearch = new ns1.BunifuFlatButton();
             this.bunifuFlatButton3 = new ns1.BunifuFlatButton();
             this.bunifuFlatButton2 = new ns1.BunifuFlatButton();
@@ -62,7 +62,7 @@
             this.bunifuCards1.Controls.Add(this.bunifuGradientPanel2);
             this.bunifuCards1.Controls.Add(this.bunifuCards2);
             this.bunifuCards1.Controls.Add(this.dateTimePickerDate);
-            this.bunifuCards1.Controls.Add(this.ClearEmployee);
+            this.bunifuCards1.Controls.Add(this.btnUpdateEntry);
             this.bunifuCards1.Controls.Add(this.btnSearch);
             this.bunifuCards1.Controls.Add(this.bunifuFlatButton3);
             this.bunifuCards1.Controls.Add(this.bunifuFlatButton2);
@@ -106,42 +106,42 @@
             this.dateTimePickerDate.Size = new System.Drawing.Size(200, 20);
             this.dateTimePickerDate.TabIndex = 22;
             // 
-            // ClearEmployee
+            // btnUpdateEntry
             // 
-            this.ClearEmployee.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.ClearEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.ClearEmployee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClearEmployee.BorderRadius = 0;
-            this.ClearEmployee.ButtonText = "Clear";
-            this.ClearEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ClearEmployee.DisabledColor = System.Drawing.Color.Gray;
-            this.ClearEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClearEmployee.Iconcolor = System.Drawing.Color.Transparent;
-            this.ClearEmployee.Iconimage = ((System.Drawing.Image)(resources.GetObject("ClearEmployee.Iconimage")));
-            this.ClearEmployee.Iconimage_right = null;
-            this.ClearEmployee.Iconimage_right_Selected = null;
-            this.ClearEmployee.Iconimage_Selected = null;
-            this.ClearEmployee.IconMarginLeft = 0;
-            this.ClearEmployee.IconMarginRight = 0;
-            this.ClearEmployee.IconRightVisible = true;
-            this.ClearEmployee.IconRightZoom = 0D;
-            this.ClearEmployee.IconVisible = true;
-            this.ClearEmployee.IconZoom = 90D;
-            this.ClearEmployee.IsTab = false;
-            this.ClearEmployee.Location = new System.Drawing.Point(568, 496);
-            this.ClearEmployee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ClearEmployee.Name = "ClearEmployee";
-            this.ClearEmployee.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.ClearEmployee.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.ClearEmployee.OnHoverTextColor = System.Drawing.Color.White;
-            this.ClearEmployee.selected = false;
-            this.ClearEmployee.Size = new System.Drawing.Size(139, 48);
-            this.ClearEmployee.TabIndex = 20;
-            this.ClearEmployee.Text = "Clear";
-            this.ClearEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ClearEmployee.Textcolor = System.Drawing.Color.White;
-            this.ClearEmployee.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClearEmployee.Click += new System.EventHandler(this.ClearEmployee_Click);
+            this.btnUpdateEntry.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnUpdateEntry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnUpdateEntry.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUpdateEntry.BorderRadius = 0;
+            this.btnUpdateEntry.ButtonText = "Update Entry";
+            this.btnUpdateEntry.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdateEntry.DisabledColor = System.Drawing.Color.Gray;
+            this.btnUpdateEntry.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateEntry.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnUpdateEntry.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnUpdateEntry.Iconimage")));
+            this.btnUpdateEntry.Iconimage_right = null;
+            this.btnUpdateEntry.Iconimage_right_Selected = null;
+            this.btnUpdateEntry.Iconimage_Selected = null;
+            this.btnUpdateEntry.IconMarginLeft = 0;
+            this.btnUpdateEntry.IconMarginRight = 0;
+            this.btnUpdateEntry.IconRightVisible = true;
+            this.btnUpdateEntry.IconRightZoom = 0D;
+            this.btnUpdateEntry.IconVisible = true;
+            this.btnUpdateEntry.IconZoom = 90D;
+            this.btnUpdateEntry.IsTab = false;
+            this.btnUpdateEntry.Location = new System.Drawing.Point(568, 496);
+            this.btnUpdateEntry.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdateEntry.Name = "btnUpdateEntry";
+            this.btnUpdateEntry.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnUpdateEntry.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnUpdateEntry.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnUpdateEntry.selected = false;
+            this.btnUpdateEntry.Size = new System.Drawing.Size(139, 48);
+            this.btnUpdateEntry.TabIndex = 20;
+            this.btnUpdateEntry.Text = "Update Entry";
+            this.btnUpdateEntry.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdateEntry.Textcolor = System.Drawing.Color.White;
+            this.btnUpdateEntry.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateEntry.Click += new System.EventHandler(this.ClearEmployee_Click);
             // 
             // btnSearch
             // 
@@ -178,6 +178,7 @@
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSearch.Textcolor = System.Drawing.Color.White;
             this.btnSearch.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // bunifuFlatButton3
             // 
@@ -255,7 +256,7 @@
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSave.BorderRadius = 0;
-            this.btnSave.ButtonText = "Save";
+            this.btnSave.ButtonText = "Save Entry";
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.DisabledColor = System.Drawing.Color.Gray;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -280,7 +281,7 @@
             this.btnSave.selected = false;
             this.btnSave.Size = new System.Drawing.Size(159, 48);
             this.btnSave.TabIndex = 16;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "Save Entry";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.Textcolor = System.Drawing.Color.White;
             this.btnSave.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -405,7 +406,7 @@
         private ns1.BunifuFlatButton btnSave;
         private ns1.BunifuFlatButton bunifuFlatButton3;
         private ns1.BunifuFlatButton bunifuFlatButton2;
-        private ns1.BunifuFlatButton ClearEmployee;
+        private ns1.BunifuFlatButton btnUpdateEntry;
         private ns1.BunifuFlatButton btnSearch;
         private Bunifu.Framework.UI.BunifuCards bunifuCards2;
         private System.Windows.Forms.RichTextBox txtEntry;

@@ -120,20 +120,24 @@ namespace Intern_forms_management_system.Diary
             }
         }
 
-        public void loadEntry()
+        public string loadEntry(string sid,string date)
         {
-           // connection.Connection();
-           // MySqlCommand cmd2;
-           // MySqlDataReader mdr;
+            connection.Connection();
+            MySqlCommand cmd2;
+            MySqlDataReader mdr;
 
-           //// String quary = "SELECT * FROM `intern_student` where studentId='" + Sidtxtbox.Text + "'";
-           // cmd2 = new MySqlCommand(quary, connection.con);
-           // connection.con.Open();
-           // mdr = cmd2.ExecuteReader();
+            String quary = "SELECT * FROM `daily_diary` where studentId='" + sid + "' and ddate='" + date + "'";
+            cmd2 = new MySqlCommand(quary, connection.con);
+            connection.con.Open();
+            mdr = cmd2.ExecuteReader();
+
+            if (mdr.Read())
+            {
+                return mdr.GetString("task");
+            }
+
+            return null;
+
         }
-
-
-
-
     }
 }

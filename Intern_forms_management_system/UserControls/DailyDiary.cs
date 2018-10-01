@@ -77,5 +77,17 @@ namespace Intern_forms_management_system.UserControls
             txtEntry.Text = "";
             txtUsername.Text = "";
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if(string.IsNullOrEmpty(txtUsername.Text) || dateTimePickerDate.Value==null)
+            {
+                MessageBox.Show("Fields are required", "Info", MessageBoxButtons.OK);
+            }
+            else
+            {
+                txtEntry.Text=entry.loadEntry(txtUsername.Text, dateTimePickerDate.Value.ToString("yyyy-M-d"));
+            }
+        }
     }
 }
