@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Intern_forms_management_system
 {
-    class Class1
+    class cls
     {
     }
 }
