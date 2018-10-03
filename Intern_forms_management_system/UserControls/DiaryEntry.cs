@@ -139,5 +139,27 @@ namespace Intern_forms_management_system.Diary
             return null;
 
         }
+
+        public void updateDiaryEntry(string sid, string date,string entry)
+        {
+
+            try
+            {
+                connection.Connection();
+                String upquery = "UPDATE daily_diary SET task=@f2 WHERE studentId='" + sid + "' and ddate='" + date + "'";
+                MySqlCommand cmd = new MySqlCommand(upquery, connection.con);
+                //DataTable table = new DataTable();
+                cmd.Parameters.AddWithValue("@f2", entry);
+
+
+                connection.con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+
+                Console.Write(e);
+            }
+        }
     }
 }

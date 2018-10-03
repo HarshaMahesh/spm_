@@ -80,13 +80,31 @@ namespace Intern_forms_management_system.UserControls
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(txtUsername.Text) || dateTimePickerDate.Value==null)
+            
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtUsername.Text) || dateTimePickerDate.Value == null)
             {
-                MessageBox.Show("Fields are required", "Info", MessageBoxButtons.OK);
+                MessageBox.Show("Fields are required", "Error", MessageBoxButtons.OK);
             }
             else
             {
-                txtEntry.Text=entry.loadEntry(txtUsername.Text, dateTimePickerDate.Value.ToString("yyyy-M-d"));
+                entry.updateDiaryEntry(txtUsername.Text, dateTimePickerDate.Value.ToString("yyyy-M-d"),txtEntry.Text);
+            }
+        }
+
+        private void btnSearch_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtUsername.Text) || dateTimePickerDate.Value == null)
+            {
+                MessageBox.Show("Fields are required", "Error", MessageBoxButtons.OK);
+            }
+            else
+            {
+                txtEntry.Text = entry.loadEntry(txtUsername.Text, dateTimePickerDate.Value.ToString("yyyy-M-d"));
             }
         }
     }

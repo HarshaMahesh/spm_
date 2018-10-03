@@ -16,7 +16,8 @@ namespace Intern_forms_management_system
         DbConnect db = new DbConnect();
         //form I-1 db oparation 
         
-        public void addStudentForm1(string id,double cgpa,int homephone,string semester,string year) {
+        public void addStudentForm1(string id,double cgpa,int homephone,string semester,string year)
+        {
 
             try
             {
