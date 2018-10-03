@@ -15,6 +15,8 @@ namespace Intern_forms_management_system.UIForms
         public static string Username { get; set; }
         private string Userpassword { get; set; }
 
+        public static string Role { get; set; }
+
         private DbConnect connection;
 
         //intialise  

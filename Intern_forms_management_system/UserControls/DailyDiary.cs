@@ -93,6 +93,8 @@ namespace Intern_forms_management_system.UserControls
             else
             {
                 entry.updateDiaryEntry(txtUsername.Text, dateTimePickerDate.Value.ToString("yyyy-M-d"),txtEntry.Text);
+
+                MessageBox.Show("Update Success", "Info", MessageBoxButtons.OK);
             }
         }
 
