@@ -9,7 +9,7 @@ using MetroFramework;
 
 namespace Intern_forms_management_system.Diary
 {
-    class DiaryEntry
+    public class DiaryEntry
     {
         //private string ID;
         private string date { get; set; }

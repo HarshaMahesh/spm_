@@ -12,7 +12,7 @@ namespace Intern_forms_management_system.UIForms
     class Login
     {
         //decalre properties 
-        public static string Username { get; set; }
+        private string Username { get; set; }
         private string Userpassword { get; set; }
 
         public static string Role { get; set; }
@@ -59,7 +59,7 @@ namespace Intern_forms_management_system.UIForms
             pass = String.Empty;
         }
         //method to check if eligible to be logged in 
-        internal bool IsLoggedIn(string user, string pass)
+        internal bool IsLoggedIn(string user, string pass,string role)
         {
             //check user name empty 
             if (string.IsNullOrEmpty(user))
@@ -141,7 +141,33 @@ namespace Intern_forms_management_system.UIForms
                   
                     else
                     {
-                        return true;
+                        connection.Connection();
+                        connection.con.Open();
+                        String query3 = "select * from users where uname=@param1 and pwd=@param2 and role=@param3";
+                        MySqlCommand cmd3 = new MySqlCommand(query3, connection.con);
+                        cmd3.Parameters.AddWithValue("@param1", user);
+                        cmd3.Parameters.AddWithValue("@param2", pass);
+                        cmd3.Parameters.AddWithValue("@param3", role);
+
+                        cmd3.Connection = connection.con;
+
+
+
+                        MySqlDataReader reader3 = cmd3.ExecuteReader();
+
+                        if (!reader3.Read())
+                        {
+                            MessageBox.Show("Role is incorrect!");
+                            ClearTexts(user, pass);
+                            return false;
+                        }
+
+                        else
+                        {
+                            return true;
+                        }
+
+                        
                     }
                 }
             }

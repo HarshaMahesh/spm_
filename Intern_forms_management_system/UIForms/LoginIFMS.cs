@@ -18,6 +18,8 @@ namespace Intern_forms_management_system.UIForms
         private TextBox txtPassword;
         private ns1.BunifuImageButton btnClose;
         private ns1.BunifuMaterialTextbox txtUsername;
+        private Label label3;
+        private ComboBox cmbRoles;
         private ns1.BunifuFlatButton btnLogin;
         //private Login login;
         public LoginIFMS()
@@ -40,6 +42,8 @@ namespace Intern_forms_management_system.UIForms
             this.btnClose = new ns1.BunifuImageButton();
             this.txtUsername = new ns1.BunifuMaterialTextbox();
             this.btnLogin = new ns1.BunifuFlatButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbRoles = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,11 +75,12 @@ namespace Intern_forms_management_system.UIForms
             // 
             this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(195)))), ((int)(((byte)(247)))));
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.White;
             this.txtPassword.Location = new System.Drawing.Point(177, 227);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(206, 32);
             this.txtPassword.TabIndex = 10;
             // 
@@ -91,12 +96,13 @@ namespace Intern_forms_management_system.UIForms
             this.btnClose.TabIndex = 9;
             this.btnClose.TabStop = false;
             this.btnClose.Zoom = 10;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txtUsername
             // 
             this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(195)))), ((int)(((byte)(247)))));
             this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.White;
             this.txtUsername.HintForeColor = System.Drawing.Color.White;
             this.txtUsername.HintText = "";
@@ -134,7 +140,7 @@ namespace Intern_forms_management_system.UIForms
             this.btnLogin.IconVisible = true;
             this.btnLogin.IconZoom = 90D;
             this.btnLogin.IsTab = false;
-            this.btnLogin.Location = new System.Drawing.Point(294, 334);
+            this.btnLogin.Location = new System.Drawing.Point(294, 343);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Normalcolor = System.Drawing.Color.Transparent;
             this.btnLogin.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
@@ -148,12 +154,43 @@ namespace Intern_forms_management_system.UIForms
             this.btnLogin.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Info;
+            this.label3.Location = new System.Drawing.Point(54, 281);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 24);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "I am a";
+            // 
+            // cmbRoles
+            // 
+            this.cmbRoles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(195)))), ((int)(((byte)(247)))));
+            this.cmbRoles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbRoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbRoles.ForeColor = System.Drawing.SystemColors.Info;
+            this.cmbRoles.FormattingEnabled = true;
+            this.cmbRoles.Items.AddRange(new object[] {
+            "Student",
+            "Supervisor",
+            "HR Manager",
+            "Industrial Manager"});
+            this.cmbRoles.Location = new System.Drawing.Point(177, 281);
+            this.cmbRoles.Name = "cmbRoles";
+            this.cmbRoles.Size = new System.Drawing.Size(206, 28);
+            this.cmbRoles.TabIndex = 14;
+            // 
             // LoginIFMS
             // 
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(672, 448);
             this.ControlBox = false;
+            this.Controls.Add(this.cmbRoles);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPassword);
@@ -172,19 +209,41 @@ namespace Intern_forms_management_system.UIForms
 
         private void btnLogin_Click_1(object sender, EventArgs e)
         {
-            Login login = new Login();           
-            if (login.IsLoggedIn(txtUsername.Text, txtPassword.Text))
+            Login login = new Login();
+
+            try
             {
-                Login.Role= txtUsername.Text;
-                DashBoard ds = new DashBoard();
-                ds.Visible = true;
-                this.Visible = false;
+                if (!string.IsNullOrEmpty(cmbRoles.SelectedItem.ToString()))
+                {
+                    if (login.IsLoggedIn(txtUsername.Text, txtPassword.Text, cmbRoles.SelectedItem.ToString()))
+                    {
+                        Login.Role = cmbRoles.SelectedItem.ToString();
+                        DashBoard ds = new DashBoard();
+                        ds.Visible = true;
+                        this.Visible = false;
+                    }
+
+                }
+
+
             }
+
+            catch(Exception err)
+            {
+                MessageBox.Show("Please select role", "error", MessageBoxButtons.OK);
+
+            }
+            
         }
 
         private void LoginIFMS_Load(object sender, EventArgs e)
         {
 
         }
-  }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+    }
 }
