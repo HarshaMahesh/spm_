@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DailyDiary));
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.btnUpdate = new ns1.BunifuFlatButton();
+            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel1 = new ns1.BunifuCustomLabel();
+            this.txtUsername = new ns1.BunifuMaterialTextbox();
+            this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.RegisterEmployeeForm = new ns1.BunifuCustomLabel();
             this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
             this.txtEntry = new System.Windows.Forms.RichTextBox();
             this.dateTimePickerDate = new System.Windows.Forms.DateTimePicker();
@@ -38,17 +44,12 @@
             this.bunifuFlatButton3 = new ns1.BunifuFlatButton();
             this.bunifuFlatButton2 = new ns1.BunifuFlatButton();
             this.btnSave = new ns1.BunifuFlatButton();
-            this.RegisterEmployeeForm = new ns1.BunifuCustomLabel();
             this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.txtUsername = new ns1.BunifuMaterialTextbox();
-            this.bunifuCustomLabel1 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.btnUpdate = new ns1.BunifuFlatButton();
+            this.btnDelete = new ns1.BunifuFlatButton();
             this.bunifuCards1.SuspendLayout();
-            this.bunifuCards2.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
+            this.bunifuCards2.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuCards1
@@ -57,6 +58,7 @@
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.Tomato;
+            this.bunifuCards1.Controls.Add(this.btnDelete);
             this.bunifuCards1.Controls.Add(this.btnUpdate);
             this.bunifuCards1.Controls.Add(this.bunifuCustomLabel2);
             this.bunifuCards1.Controls.Add(this.bunifuCustomLabel1);
@@ -77,6 +79,111 @@
             this.bunifuCards1.Size = new System.Drawing.Size(1074, 571);
             this.bunifuCards1.TabIndex = 11;
             this.bunifuCards1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards1_Paint);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUpdate.BorderRadius = 0;
+            this.btnUpdate.ButtonText = "Update Entry";
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdate.DisabledColor = System.Drawing.Color.Gray;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnUpdate.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Iconimage")));
+            this.btnUpdate.Iconimage_right = null;
+            this.btnUpdate.Iconimage_right_Selected = null;
+            this.btnUpdate.Iconimage_Selected = null;
+            this.btnUpdate.IconMarginLeft = 0;
+            this.btnUpdate.IconMarginRight = 0;
+            this.btnUpdate.IconRightVisible = true;
+            this.btnUpdate.IconRightZoom = 0D;
+            this.btnUpdate.IconVisible = true;
+            this.btnUpdate.IconZoom = 90D;
+            this.btnUpdate.IsTab = false;
+            this.btnUpdate.Location = new System.Drawing.Point(451, 496);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnUpdate.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnUpdate.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnUpdate.selected = false;
+            this.btnUpdate.Size = new System.Drawing.Size(152, 48);
+            this.btnUpdate.TabIndex = 30;
+            this.btnUpdate.Text = "Update Entry";
+            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdate.Textcolor = System.Drawing.Color.White;
+            this.btnUpdate.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(15, 270);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(86, 20);
+            this.bunifuCustomLabel2.TabIndex = 29;
+            this.bunifuCustomLabel2.Text = "Pick Date";
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(15, 194);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(140, 20);
+            this.bunifuCustomLabel1.TabIndex = 28;
+            this.bunifuCustomLabel1.Text = "Student Number";
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtUsername.HintForeColor = System.Drawing.Color.Empty;
+            this.txtUsername.HintText = "";
+            this.txtUsername.isPassword = false;
+            this.txtUsername.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txtUsername.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtUsername.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txtUsername.LineThickness = 3;
+            this.txtUsername.Location = new System.Drawing.Point(176, 170);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(275, 44);
+            this.txtUsername.TabIndex = 27;
+            this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // bunifuGradientPanel2
+            // 
+            this.bunifuGradientPanel2.BackColor = System.Drawing.Color.Olive;
+            this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
+            this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel2.Controls.Add(this.RegisterEmployeeForm);
+            this.bunifuGradientPanel2.GradientBottomLeft = System.Drawing.Color.White;
+            this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.White;
+            this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel2.Location = new System.Drawing.Point(19, 49);
+            this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
+            this.bunifuGradientPanel2.Quality = 10;
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(163, 56);
+            this.bunifuGradientPanel2.TabIndex = 25;
+            // 
+            // RegisterEmployeeForm
+            // 
+            this.RegisterEmployeeForm.AutoSize = true;
+            this.RegisterEmployeeForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegisterEmployeeForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.RegisterEmployeeForm.Location = new System.Drawing.Point(3, 14);
+            this.RegisterEmployeeForm.Name = "RegisterEmployeeForm";
+            this.RegisterEmployeeForm.Size = new System.Drawing.Size(157, 31);
+            this.RegisterEmployeeForm.TabIndex = 1;
+            this.RegisterEmployeeForm.Text = "Daily Diary";
             // 
             // bunifuCards2
             // 
@@ -274,7 +381,7 @@
             this.btnSave.IconVisible = true;
             this.btnSave.IconZoom = 90D;
             this.btnSave.IsTab = false;
-            this.btnSave.Location = new System.Drawing.Point(326, 496);
+            this.btnSave.Location = new System.Drawing.Point(203, 496);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -288,17 +395,6 @@
             this.btnSave.Textcolor = System.Drawing.Color.White;
             this.btnSave.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
-            // 
-            // RegisterEmployeeForm
-            // 
-            this.RegisterEmployeeForm.AutoSize = true;
-            this.RegisterEmployeeForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegisterEmployeeForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.RegisterEmployeeForm.Location = new System.Drawing.Point(11, 7);
-            this.RegisterEmployeeForm.Name = "RegisterEmployeeForm";
-            this.RegisterEmployeeForm.Size = new System.Drawing.Size(146, 31);
-            this.RegisterEmployeeForm.TabIndex = 1;
-            this.RegisterEmployeeForm.Text = "Daily Diary";
             // 
             // bunifuGradientPanel3
             // 
@@ -328,95 +424,41 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1132, 85);
             this.bunifuGradientPanel1.TabIndex = 10;
             // 
-            // bunifuGradientPanel2
+            // btnDelete
             // 
-            this.bunifuGradientPanel2.BackColor = System.Drawing.Color.Olive;
-            this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
-            this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel2.Controls.Add(this.RegisterEmployeeForm);
-            this.bunifuGradientPanel2.GradientBottomLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel2.Location = new System.Drawing.Point(22, 50);
-            this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
-            this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(160, 38);
-            this.bunifuGradientPanel2.TabIndex = 25;
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtUsername.HintForeColor = System.Drawing.Color.Empty;
-            this.txtUsername.HintText = "";
-            this.txtUsername.isPassword = false;
-            this.txtUsername.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtUsername.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtUsername.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtUsername.LineThickness = 3;
-            this.txtUsername.Location = new System.Drawing.Point(162, 170);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(289, 44);
-            this.txtUsername.TabIndex = 27;
-            this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // bunifuCustomLabel1
-            // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(19, 196);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(84, 13);
-            this.bunifuCustomLabel1.TabIndex = 28;
-            this.bunifuCustomLabel1.Text = "Student Number";
-            // 
-            // bunifuCustomLabel2
-            // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(19, 276);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(54, 13);
-            this.bunifuCustomLabel2.TabIndex = 29;
-            this.bunifuCustomLabel2.Text = "Pick Date";
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnUpdate.BorderRadius = 0;
-            this.btnUpdate.ButtonText = "Update Entry";
-            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUpdate.DisabledColor = System.Drawing.Color.Gray;
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnUpdate.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Iconimage")));
-            this.btnUpdate.Iconimage_right = null;
-            this.btnUpdate.Iconimage_right_Selected = null;
-            this.btnUpdate.Iconimage_Selected = null;
-            this.btnUpdate.IconMarginLeft = 0;
-            this.btnUpdate.IconMarginRight = 0;
-            this.btnUpdate.IconRightVisible = true;
-            this.btnUpdate.IconRightZoom = 0D;
-            this.btnUpdate.IconVisible = true;
-            this.btnUpdate.IconZoom = 90D;
-            this.btnUpdate.IsTab = false;
-            this.btnUpdate.Location = new System.Drawing.Point(585, 496);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnUpdate.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btnUpdate.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnUpdate.selected = false;
-            this.btnUpdate.Size = new System.Drawing.Size(152, 48);
-            this.btnUpdate.TabIndex = 30;
-            this.btnUpdate.Text = "Update Entry";
-            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Textcolor = System.Drawing.Color.White;
-            this.btnUpdate.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.btnDelete.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDelete.BorderRadius = 0;
+            this.btnDelete.ButtonText = "Delete Entry";
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.DisabledColor = System.Drawing.Color.Gray;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnDelete.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDelete.Iconimage")));
+            this.btnDelete.Iconimage_right = null;
+            this.btnDelete.Iconimage_right_Selected = null;
+            this.btnDelete.Iconimage_Selected = null;
+            this.btnDelete.IconMarginLeft = 0;
+            this.btnDelete.IconMarginRight = 0;
+            this.btnDelete.IconRightVisible = true;
+            this.btnDelete.IconRightZoom = 0D;
+            this.btnDelete.IconVisible = true;
+            this.btnDelete.IconZoom = 90D;
+            this.btnDelete.IsTab = false;
+            this.btnDelete.Location = new System.Drawing.Point(654, 496);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnDelete.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnDelete.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnDelete.selected = false;
+            this.btnDelete.Size = new System.Drawing.Size(139, 48);
+            this.btnDelete.TabIndex = 31;
+            this.btnDelete.Text = "Delete Entry";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Textcolor = System.Drawing.Color.White;
+            this.btnDelete.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // DailyDiary
             // 
@@ -429,9 +471,9 @@
             this.Size = new System.Drawing.Size(1133, 653);
             this.bunifuCards1.ResumeLayout(false);
             this.bunifuCards1.PerformLayout();
-            this.bunifuCards2.ResumeLayout(false);
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.bunifuGradientPanel2.PerformLayout();
+            this.bunifuCards2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -455,5 +497,6 @@
         private ns1.BunifuCustomLabel bunifuCustomLabel1;
         private ns1.BunifuMaterialTextbox txtUsername;
         private ns1.BunifuFlatButton btnUpdate;
+        private ns1.BunifuFlatButton btnDelete;
     }
 }
