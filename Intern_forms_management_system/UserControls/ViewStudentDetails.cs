@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace Intern_forms_management_system.UserControls
 {
-    public partial class UCStudentRegisterHR : UserControl
+    public partial class ViewStudentDetails : UserControl
     {
         DbOperation dbobject = new DbOperation();
 
-        public UCStudentRegisterHR()
+        StudentView student = new StudentView();
+
+        public ViewStudentDetails()
         {
             InitializeComponent();
         }
@@ -37,15 +39,23 @@ namespace Intern_forms_management_system.UserControls
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             //Button for inserting an employee to the Company Database
-            if (NameTextBox.Text == "" || NameTextBox.Text == "Enter name here....." || UniversityTextBox.Text == "" || AddressTextBox.Text == "" || EmailTextBox.Text == "" || TelephoneTextBox.Text == "" || DepartmentTextBox.Text == "")
+            if (string.IsNullOrEmpty(StudentIDTextBox.Text))
             {
                 MessageBox.Show("Please Fill all the fields.....");
 
             }
             else
             {
-                dbobject.registerIntern(StudentIDTextBox.Text,NameTextBox.Text,UniversityTextBox.Text,EmailTextBox.Text,TelephoneTextBox.Text,DepartmentTextBox.Text,AddressTextBox.Text);
-                MessageBox.Show(this, "Employee Inserted in to the database Successully", "", MessageBoxButtons.OK);
+                DataTable dt = student.loadStudentDetails(StudentIDTextBox.Text);
+                if ( dt== null)
+                {
+                    MessageBox.Show(this, "Student does not exist", "", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    bunifuCustomDataGrid1.DataSource = dt;
+                }
+                 //MessageBox.Show(this, "Employee Inserted in to the database Successully", "", MessageBoxButtons.OK);
                 
             }
         }
@@ -62,7 +72,7 @@ namespace Intern_forms_management_system.UserControls
 
         private void NameTextBox_Enter(object sender, EventArgs e)
         {
-            NameTextBox.Text = "";
+           
         }
 
         private void NameTextBox_Leave(object sender, EventArgs e)
@@ -72,7 +82,7 @@ namespace Intern_forms_management_system.UserControls
 
         private void UniversityTextBox_Enter(object sender, EventArgs e)
         {
-            UniversityTextBox.Text = "";
+           
         }
 
         private void UniversityTextBox_Leave(object sender, EventArgs e)
@@ -87,7 +97,7 @@ namespace Intern_forms_management_system.UserControls
 
         private void AddressTextBox_Enter(object sender, EventArgs e)
         {
-            AddressTextBox.Text = "";
+            
         }
 
         private void AddressTextBox_Leave(object sender, EventArgs e)
@@ -97,7 +107,7 @@ namespace Intern_forms_management_system.UserControls
 
         private void EmailTextBox_Enter(object sender, EventArgs e)
         {
-            EmailTextBox.Text = "";
+            
         }
 
         private void EmailTextBox_Leave(object sender, EventArgs e)
@@ -112,24 +122,19 @@ namespace Intern_forms_management_system.UserControls
 
         private void TelephoneTextBox_Enter(object sender, EventArgs e)
         {
-            TelephoneTextBox.Text = "";
+            
         }
 
         private void DepartmentTextBox_Enter(object sender, EventArgs e)
         {
-            DepartmentTextBox.Text = "";
+            
         }
 
         private void ClearEmployee_Click(object sender, EventArgs e)
         {
             //Clear the text in text boxes
            
-            NameTextBox.Text = "";
-            AddressTextBox.Text = "";
-            EmailTextBox.Text = "";
-            DepartmentTextBox.Text = "";
-            TelephoneTextBox.Text = "";
-            UniversityTextBox.Text = "";
+            
         }
 
         private void StudentIDTextBox_Enter(object sender, EventArgs e)

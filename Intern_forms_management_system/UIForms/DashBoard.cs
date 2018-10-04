@@ -15,7 +15,7 @@ namespace Intern_forms_management_system.UIForms
             
     {
         UserControls.UcForm1 form1;
-        UserControls.UCStudentRegisterHR stdReg;
+        UserControls.ViewStudentDetails stdReg;
         UserControls.DailyDiary form3;
         UserControls.SupervisorDailyDiary form32;
 
@@ -29,7 +29,7 @@ namespace Intern_forms_management_system.UIForms
 
             db = new DbConnect();
             form1 = new UserControls.UcForm1();
-            stdReg = new UserControls.UCStudentRegisterHR();
+            stdReg = new UserControls.ViewStudentDetails();
             form3 = new UserControls.DailyDiary();
             form32 = new UserControls.SupervisorDailyDiary();
             form33 = new UserControls.UCInernshipReport();
