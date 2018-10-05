@@ -31,20 +31,20 @@ namespace Intern_forms_management_system.UserControls
         }
 
 
-        public DataTable loadStudentDetails(string sid)
+        public DataSet loadStudentDetails(string sid)
         {
             try
             {
                 connection.Connection();
                 connection.con.Open();
-                DataTable dt = new DataTable();
+                DataSet dt = new DataSet();
                 String query = "SELECT * FROM ` intern_student` where studentId='"+sid+"'";
 
                 MySqlDataAdapter mda = new MySqlDataAdapter(query, connection.con);
 
                 mda.Fill(dt);
 
-                if (dt.Rows.Count >= 0)
+                if (dt.Tables[0].Rows.Count >= 0)
                 {
                     return dt;
                 }
