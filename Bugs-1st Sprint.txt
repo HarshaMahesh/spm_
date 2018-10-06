@@ -4,3 +4,4 @@ Calendar for the date of birth fixed according to the date format (yyyy/dd/mm)
 
 IT Number/ Registration number is required when registering for an internship
 
+Replace EID with the Student ID to insert the student details in to the database 

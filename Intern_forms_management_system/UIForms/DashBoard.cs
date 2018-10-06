@@ -58,7 +58,7 @@ namespace Intern_forms_management_system.UIForms
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            if (SidePanal.Width == 277)
+                if (SidePanal.Width == 277)
             {
                 sidepanelbtn.Visible = true;
                 logo.Visible = false;
