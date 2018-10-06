@@ -60,8 +60,8 @@ namespace Intern_forms_management_system.UIForms
                 timer1.Stop();
                 bunifuFormFadeTransition1.HideAsyc(this, false);
                 this.Visible = false;
-                DashBoard dash = new DashBoard();
-                dash.Visible = true;
+                LoginIFMS login = new LoginIFMS();
+                login.Visible = true;
 
             }
         }

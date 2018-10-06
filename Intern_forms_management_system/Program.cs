@@ -17,7 +17,7 @@ namespace Intern_forms_management_system
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DashBoard());
+            Application.Run(new SplashScreen());
         }
     }
 }
