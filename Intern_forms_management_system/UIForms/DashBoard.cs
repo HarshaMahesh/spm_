@@ -18,6 +18,7 @@ namespace Intern_forms_management_system.UIForms
         UserControls.UCStudentRegisterHR stdReg;
         UserControls.DailyDiary form3;
         UserControls.SupervisorDailyDiary form32;
+
         UserControls.UCInernshipReport form33;
         DbConnect db;
         public DashBoard()
@@ -152,12 +153,13 @@ namespace Intern_forms_management_system.UIForms
            sidepanelbtn.Visible = false;
            logo.Visible = true;
            SidePanal.Width = 277;
-            form3.Hide();
-            form32.Hide();
+
             form33.Hide();
-            panel2.Hide();
-            form1.Hide();
+            form32.Hide();
             stdReg.Hide();
+            form3.Hide();
+            form1.Hide();
+            form1.Hide();
             panel2.Show();
         }
 
@@ -249,10 +251,9 @@ namespace Intern_forms_management_system.UIForms
             panel1.Controls.Add(form32);
         }
 
-        private void bunifuFlatButton5_Click(object sender, EventArgs e)
-        {
-            
-                if (SidePanal.Width == 277)
+        private void bunifuFlatButton5_Click(object sender, EventArgs e) { 
+      
+            if (SidePanal.Width == 277)
             {
                 sidepanelbtn.Visible = true;
                 logo.Visible = false;
