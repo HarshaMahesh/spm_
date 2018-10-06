@@ -1,0 +1,10 @@
+ID	Story				desription				                        QA Engineer	Status
+b100	Dashboard			Issue with the splashscreen not aligning				Windula	Fixed
+b101	Login				Issue with the validations and roles				Harsha	Fixed
+b102	Login				Issue with the database connection				Harsha	Fixed
+b103	View Intern Diary		Alignments in the interface				        Nihara	
+b104	Register Employee		Issues with datepicker, calendar				Nihara	Fixed
+b105	Create Intern report UI		Datepicker should be implemented for Start Date, End Date 				Harsha, Nihara	
+b106	Schedule viva			Issues with the user interface form				Nihara	Fixed
+b107	Schedule viva			Issues with the Database and the time picker				Akila	Pending
+	Login				Issues with the Role/User Management				Harsha	Fixed
