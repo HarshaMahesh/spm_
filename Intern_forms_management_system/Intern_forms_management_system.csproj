@@ -67,7 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DbConnect.cs" />
-    <Compile Include="DbOparation.cs" />
+    <Compile Include="DbOperation.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,11 +88,28 @@
     <Compile Include="UIForms\DashBoard.Designer.cs">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIForms\Login.cs" />
+    <Compile Include="UIForms\LoginIFMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UIForms\SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UIForms\SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DailyDiary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DailyDiary.designer.cs">
+      <DependentUpon>DailyDiary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DiaryEntry.cs" />
+    <Compile Include="UserControls\SupervisorDailyDiary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SupervisorDailyDiary.designer.cs">
+      <DependentUpon>SupervisorDailyDiary.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UcForm1.cs">
       <SubType>UserControl</SubType>
@@ -100,10 +117,23 @@
     <Compile Include="UserControls\UcForm1.Designer.cs">
       <DependentUpon>UcForm1.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="UserControls\UCStudentRegisterHR.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\UCStudentRegisterHR.Designer.cs">
+=======
+    <Compile Include="UserControls\UCInernshipReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCInernshipReport.designer.cs">
+      <DependentUpon>UCInernshipReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCStudentRegisterHR.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCStudentRegisterHR.designer.cs">
+>>>>>>> b70ed2005773cc744b7adfb87a4a34705b72878f
       <DependentUpon>UCStudentRegisterHR.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -114,12 +144,27 @@
     <EmbeddedResource Include="UIForms\DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UIForms\LoginIFMS.resx">
+      <DependentUpon>LoginIFMS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIForms\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DailyDiary.resx">
+      <DependentUpon>DailyDiary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\SupervisorDailyDiary.resx">
+      <DependentUpon>SupervisorDailyDiary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UcForm1.resx">
       <DependentUpon>UcForm1.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+=======
+    <EmbeddedResource Include="UserControls\UCInernshipReport.resx">
+      <DependentUpon>UCInernshipReport.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> b70ed2005773cc744b7adfb87a4a34705b72878f
     <EmbeddedResource Include="UserControls\UCStudentRegisterHR.resx">
       <DependentUpon>UCStudentRegisterHR.cs</DependentUpon>
     </EmbeddedResource>

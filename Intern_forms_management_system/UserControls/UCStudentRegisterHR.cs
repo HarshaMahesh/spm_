@@ -12,6 +12,7 @@ namespace Intern_forms_management_system.UserControls
 {
     public partial class UCStudentRegisterHR : UserControl
     {
+
         DbOparation dbobject = new DbOparation();
 
         public UCStudentRegisterHR()
@@ -45,7 +46,12 @@ namespace Intern_forms_management_system.UserControls
             else
             {
                 dbobject.registerIntern(StudentIDTextBox.Text,NameTextBox.Text,UniversityTextBox.Text,EmailTextBox.Text,TelephoneTextBox.Text,DepartmentTextBox.Text,AddressTextBox.Text);
+
                 MessageBox.Show("Employee Inserted in to the database Successully");
+
+                MessageBox.Show(this, "Employee Inserted in to the database Successully", "", MessageBoxButtons.OK);
+                
+
             }
         }
 
