@@ -99,9 +99,9 @@ namespace Intern_forms_management_system.UIForms
             {
                 connection.Connection();
                 connection.con.Open();
-                String query1 = "select * from users wherer username=@param1";
+                String query1 = "select * from users where uname='"+user+"'";
                 MySqlCommand cmd = new MySqlCommand(query1, connection.con);
-                cmd.Parameters.AddWithValue("@param1", getUsername());
+                //cmd.Parameters.AddWithValue("@param1", getUsername());
                 cmd.Connection = connection.con;
                
 
@@ -117,6 +117,28 @@ namespace Intern_forms_management_system.UIForms
                 //check password is empty 
                 else
                 {
+                    connection.Connection();
+                    connection.con.Open();
+                    String query2 = "select * from users where uname=@param1 and pwd=@param2";
+                    MySqlCommand cmd2 = new MySqlCommand(query2, connection.con);
+                    cmd2.Parameters.AddWithValue("@param1", user);
+                    cmd2.Parameters.AddWithValue("@param2", pass);
+                    cmd2.Connection = connection.con;
+                    //MessageBox.Show(getUsername());
+                    //MessageBox.Show(getUsername());
+
+
+                    MySqlDataReader reader2 = cmd2.ExecuteReader();
+
+
+                    //check password is correct 
+                    
+                    if (!reader2.Read())
+                    {
+                        MessageBox.Show("password is incorrect!");
+                        ClearTexts(user, pass);
+                        return false;
+                    }
                     if (string.IsNullOrEmpty(pass))
                     {
                         MessageBox.Show("Enter the passowrd!");
@@ -128,12 +150,7 @@ namespace Intern_forms_management_system.UIForms
                         MessageBox.Show("Enter only integer here");
                         return false;
                     }
-                    //check password is correct 
-                    else if (Userpassword != pass)
-                    {
-                        MessageBox.Show("Password is incorrect");
-                        return false;
-                    }
+                  
                     else
                     {
                         return true;

@@ -23,10 +23,7 @@ namespace Intern_forms_management_system.UserControls
             InitializeComponent();
         }
         public void studentEmpty() {
-            stdnametbox.Text ="";
-            addresstbox.Text = "";
-            mphonetbox.Text = "";
-            emailtbox.Text = "";
+                     
             hphonetbox.Text = "";
             cgpatbox.Text = "";
             yeartbox.Text = "";
@@ -102,8 +99,7 @@ namespace Intern_forms_management_system.UserControls
 
         private void bunifuCustomLabel25_Click(object sender, EventArgs e)
         {
-            // dbo.searchSudent(Sidtxtbox.Text,snametbox.Text, addresstbox.Text, mphonetbox.Text,semailtbox.Text);
-            //MetroMessageBox.Show(this, "Successfully Inserted", "", MessageBoxButtons.OK);
+           
             
         }
 
